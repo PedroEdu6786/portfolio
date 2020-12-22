@@ -6,6 +6,7 @@ import {
   Text,
   Button,
   Stack,
+  HStack,
   Link as LinkC,
 } from '@chakra-ui/react'
 
@@ -17,6 +18,7 @@ import {
   Input,
   Textarea,
 } from '@chakra-ui/react'
+import { HiOutlineMail } from 'react-icons/hi'
 
 const Contact = () => {
   return (
@@ -38,11 +40,12 @@ const Contact = () => {
         Now that you’ve seen what i can do, let’s get in touch and start making
         magic together!
       </Text>
-      <Flex pt={8}>
-        <LinkC href="mailto:pedrcg835@gmail.com" target="_blank">
-          pedrcg835@gmail.com
-        </LinkC>
-      </Flex>
+      <LinkC href="mailto:pedrcg835@gmail.com" target="_blank">
+        <HStack pt={8}>
+          <HiOutlineMail fontSize="1.5rem" />
+          <Text>pedrcg835@gmail.com</Text>
+        </HStack>
+      </LinkC>
       <FormControl mt={8}>
         <Stack spacing={3}>
           <Box>
@@ -70,6 +73,9 @@ const Contact = () => {
               placeholder="I just wanna chat for a while, you seem interesting"
             />
           </Box>
+          <Button bgColor="portfolio.blue" color="portfolio.white">
+            Let's get in touch
+          </Button>
         </Stack>
       </FormControl>
     </Box>

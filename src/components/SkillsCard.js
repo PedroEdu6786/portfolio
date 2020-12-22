@@ -1,14 +1,13 @@
 import React from 'react'
-import { Box, Flex, Heading, Text, Container, Spacer } from '@chakra-ui/react'
+import { Box, Flex, Heading, Text, Container, HStack } from '@chakra-ui/react'
 
-const SkillsCard = () => {
+const SkillsCard = ({ icon, title, skills }) => {
   return (
-    <Flex my="3rem">
-      <img src="https://via.placeholder.com/80" alt="dod" />
-      <Spacer />
+    <HStack spacing={6} justify="center">
+      {icon}
       <Box ml="1rem">
         <Heading as="h3" size="lg">
-          Soft Skills
+          {title}
         </Heading>
         <Flex wrap="wrap">
           <Text
@@ -43,7 +42,7 @@ const SkillsCard = () => {
           </Text>
         </Flex>
       </Box>
-    </Flex>
+    </HStack>
   )
 }
 

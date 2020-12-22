@@ -1,17 +1,28 @@
 import React from 'react'
-import { Box, Flex, Heading, Text, Button, Container } from '@chakra-ui/react'
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Button,
+  Container,
+  HStack,
+} from '@chakra-ui/react'
 import { Image as ImageC } from '@chakra-ui/react'
+import { IoIosArrowForward } from 'react-icons/io'
+import { AiFillGithub } from 'react-icons/ai'
+import { FaLinkedinIn, FaInstagram } from 'react-icons/fa'
 
 const Hero = () => {
   return (
-    <Box mt="4rem" p={7} pb="10rem" pos="relative" overflow="hidden">
-      <Container>
+    <Box mt="2rem" p={7} pb="12rem" pos="relative" overflow="hidden">
+      <Box>
         <ImageC
           boxSize="300px"
           pos="absolute"
           src="/blob.svg"
           alt="blob"
-          bottom="0"
+          bottom="-7"
           right="0"
           mr="-4rem"
         />
@@ -19,12 +30,12 @@ const Hero = () => {
           pos="absolute"
           htmlHeight="350px"
           htmlWidth="250px"
-          bottom="0"
+          bottom="-7"
           right="0"
           src="/hero-img.png"
           mr="-4rem"
         />
-      </Container>
+      </Box>
       <Box>
         <Heading as="h1" size="2xl">
           I develop{' '}
@@ -63,16 +74,17 @@ const Hero = () => {
           Change mood
         </Button>
       </Container>
-      <Text
-        mt="3rem"
-        ml="1.5rem"
+      <HStack
+        mt="1rem"
+        pos="absolute"
+        bottom="0"
         fontWeight="bold"
         fontSize="xl"
-        transform="rotate(90deg)"
-        transformOrigin="top left"
       >
-        Scroll Down
-      </Text>
+        <AiFillGithub color="#242323" />
+        <FaLinkedinIn color="#242323" />
+        <FaInstagram color="#242323" />
+      </HStack>
     </Box>
   )
 }

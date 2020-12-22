@@ -1,12 +1,8 @@
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme, CSSReset } from '@chakra-ui/react'
+import '../styles/global.css'
 
 const theme = extendTheme({
   colors: {
-    global: {
-      body: {
-        fontFamily: "'Montserrat', sans-serif",
-      },
-    },
     portfolio: {
       gray: '#EAEAEA',
       white: '#F9F9F9',
@@ -23,6 +19,7 @@ const theme = extendTheme({
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
+      <CSSReset />
       <Component {...pageProps} />
     </ChakraProvider>
   )

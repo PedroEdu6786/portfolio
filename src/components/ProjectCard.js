@@ -1,11 +1,6 @@
 import React from 'react'
-import {
-  Box,
-  Heading,
-  Text,
-  Link as LinkC,
-  ExternalLinkIcon,
-} from '@chakra-ui/react'
+import { Box, Heading, Text, Link as LinkC, HStack } from '@chakra-ui/react'
+import { BsBoxArrowUpRight } from 'react-icons/bs'
 
 const ProjectCard = () => {
   return (
@@ -33,8 +28,10 @@ const ProjectCard = () => {
           color="portfolio.white"
           href="#"
         >
-          See more
-          {/* <ExternalLinkIcon mx="2px" /> */}
+          <HStack align="center">
+            <Text>See more</Text>
+            <BsBoxArrowUpRight />
+          </HStack>
         </LinkC>
       </Box>
       <Box

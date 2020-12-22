@@ -5,7 +5,7 @@ import Skills from '../src/components/Skills'
 import About from '../src/components/About'
 import Contact from '../src/components/Contact'
 import Footer from '../src/components/Footer'
-import { Box, Flex, Heading, Text, Button, Container } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 export default function Home() {
   return (
