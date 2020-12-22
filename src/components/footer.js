@@ -1,11 +1,14 @@
-import React from "react";
+import React from 'react'
+import { Box, Text, Center } from '@chakra-ui/react'
 
 const Footer = () => {
-    return (
-        <footer>
-            <a>Made with love by Eduardo Cruz</a>
-        </footer>
-    );
-};
+  return (
+    <Box bgColor="portfolio.black" p={5} w="100%">
+      <Center fontWeight="semibold" color="portfolio.lightBlue">
+        Made with love by Pedro Cruz
+      </Center>
+    </Box>
+  )
+}
 
-export default Footer;
+export default Footer

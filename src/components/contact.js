@@ -1,29 +1,79 @@
-import React from "react";
+import React from 'react'
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Button,
+  Stack,
+  Link as LinkC,
+} from '@chakra-ui/react'
+
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input,
+  Textarea,
+} from '@chakra-ui/react'
 
 const Contact = () => {
-    return (
-        <>
-            {/* Container 1 */}
-            <h2>Let's make things happen</h2>
-            <p>
-                Now that you’ve seen what i can do, let’s get in touch and start
-                making magic together!
-            </p>
-            <a href="mailto: pedrcg835@gmail.com">pedrcg835@gmail.com</a>
-            {/* Container 1 */}
+  return (
+    <Box p={7} py="1||rem">
+      <Flex align="center" pt="3rem">
+        <Heading pt={5} as="h2" fontSize="2.25rem">
+          Let's make things happen
+        </Heading>
+        <Heading
+          pos="absolute"
+          fontSize="7rem"
+          opacity=".1"
+          color="portfolio.blue"
+        >
+          Contact
+        </Heading>
+      </Flex>
+      <Text pt={8}>
+        Now that you’ve seen what i can do, let’s get in touch and start making
+        magic together!
+      </Text>
+      <Flex pt={8}>
+        <LinkC href="mailto:pedrcg835@gmail.com" target="_blank">
+          pedrcg835@gmail.com
+        </LinkC>
+      </Flex>
+      <FormControl mt={8}>
+        <Stack spacing={3}>
+          <Box>
+            <FormLabel>Whats your name?</FormLabel>
+            <Input
+              bg="portfolio.lightBlue"
+              type="text"
+              variant="filled"
+              placeholder="John Doe"
+            />
+          </Box>
+          <Box>
+            <FormLabel>Provide me your email</FormLabel>
+            <Input
+              bg="portfolio.lightBlue"
+              type="email"
+              variant="filled"
+              placeholder="yourock@email.com"
+            />
+          </Box>
+          <Box>
+            <FormLabel>What's up?</FormLabel>
+            <Textarea
+              bg="portfolio.lightBlue"
+              placeholder="I just wanna chat for a while, you seem interesting"
+            />
+          </Box>
+        </Stack>
+      </FormControl>
+    </Box>
+  )
+}
 
-            {/* form container */}
-            <form>
-                <label>What's your name?</label>
-                <input type="text" name="name" />
-                <label>Provide me your email</label>
-                <input type="email" name="email" />
-                <label>What's up</label>
-                <input type="textarea" name="info" />
-            </form>
-            {/* form container */}
-        </>
-    );
-};
-
-export default Contact;
+export default Contact
