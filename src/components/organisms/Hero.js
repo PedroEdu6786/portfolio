@@ -11,32 +11,31 @@ import ReactIcon from '../atoms/ReactIcon'
 const Hero = () => {
   return (
     <Box>
-      {/*-------------- Pictures -------------- */}
+      {/*-------------- PICTURES -------------- */}
       <Box>
         <Image
-          mr="-4rem"
+          mr={{ base: '-4rem', md: '0' }}
           pos="absolute"
           bottom="-7"
           right="0"
-          boxSize="300px"
+          boxSize={{ base: '300px', md: '325px', lg: '350px' }}
           src="/blob.svg"
           alt="blob"
         />
         <Image
-          mr="-4rem"
+          mr={{ base: '-4rem', md: '0' }}
           pos="absolute"
           bottom="-7"
           right="0"
-          htmlHeight="350px"
-          htmlWidth="250px"
+          maxW={{ base: '250px', md: '275px', lg: '300px' }}
           src="/hero-img.png"
           alt="It'sMe"
         />
       </Box>
 
-      <Stack spacing={4}>
+      <Stack spacing={{ base: 4, md: 8 }}>
         {/*-------------- HEADINGS -------------- */}
-        <Stack>
+        <Stack maxW="500px" spacing={{ base: 4, md: 8 }}>
           <Title>
             I develop <TitleVariant>dreams</TitleVariant> and{' '}
             <TitleVariant>smiles</TitleVariant>
@@ -47,17 +46,27 @@ const Hero = () => {
         </Stack>
 
         {/*-------------- BUTTONS -------------- */}
-        <Stack w="11rem">
-          <ButtonAction variant="solid">Download my CV</ButtonAction>
-          <ButtonAction variant="outline">Change mood</ButtonAction>
+        <Stack align="center" direction={['column', 'row']}>
+          <ButtonAction display="flex" variant="solid" maxW="11rem">
+            Download my CV
+          </ButtonAction>
+          <ButtonAction display="flex" variant="outline" maxW="11rem">
+            Change mood
+          </ButtonAction>
         </Stack>
       </Stack>
 
       {/*-------------- SOCIAL MEDIA -------------- */}
-      <Stack pos="absolute" bottom="0" fontWeight="bold" fontSize="xl">
-        <ReactIcon icon={AiFillGithub} />
-        <ReactIcon icon={FaLinkedinIn} />
-        <ReactIcon icon={FaInstagram} />
+      <Stack
+        pos="absolute"
+        bottom="0"
+        fontWeight="bold"
+        fontSize="xl"
+        direction={{ base: 'column', md: 'row' }}
+      >
+        <ReactIcon fontSize="1.6rem" icon={AiFillGithub} />
+        <ReactIcon fontSize="1.6rem" icon={FaLinkedinIn} />
+        <ReactIcon fontSize="1.6rem" icon={FaInstagram} />
       </Stack>
     </Box>
   )

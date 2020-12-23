@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { Box, Flex, Heading, Text, Link, HStack } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack } from '@chakra-ui/react'
 import {
   Drawer,
   DrawerBody,
@@ -9,22 +9,8 @@ import {
   DrawerCloseButton,
   useDisclosure,
 } from '@chakra-ui/react'
-import { CgMenuRight } from 'react-icons/cg'
-
-const MenuItem = ({ children, isLast, to = '/', ...rest }) => {
-  return (
-    <Box
-      mb={{ base: isLast ? 0 : 8, sm: 0 }}
-      mr={{ base: 0, sm: isLast ? 0 : 8 }}
-      display="block"
-      {...rest}
-    >
-      <Link href={to}>{children}</Link>
-    </Box>
-  )
-}
-
-const MenuIcon = () => <CgMenuRight fontSize="1.75rem" />
+import MenuItem from '../atoms/MenuItem'
+import MenuIcon from '../atoms/MenuIcon'
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -41,16 +27,9 @@ const Header = () => {
 
       {/*-------------- NAVBAR -------------- */}
       <HStack display={{ base: 'flex', md: 'none' }}>
-        <Text
-          fontWeight="bold"
-          border="2px"
-          borderColor="portfolio.blue"
-          py={0.75}
-          px={4}
-          borderRadius="1rem"
-        >
+        <MenuItem isFirst to="#projects">
           Projects
-        </Text>
+        </MenuItem>
         <Box onClick={onOpen}>
           <MenuIcon />
         </Box>

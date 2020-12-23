@@ -7,14 +7,17 @@ import { projects } from '../../utils/projects'
 const Projects = () => {
   return (
     <>
-      <Stack mx={6} spacing={6}>
+      {/*-------------- DESCRIPTION -------------- */}
+      <Stack mx={{ base: 6, md: 10 }} spacing={6}>
         <SectionTitle
           heading="My Work"
           shadow="Projects"
           description="Here is a list of projects I have developed"
         />
       </Stack>
-      <Flex px={6} flex="1" overflow="auto">
+
+      {/*-------------- PROJECTS -------------- */}
+      <Flex px={{ base: 6, md: 10 }} flex="1" overflow="auto">
         <HStack h="26rem" minH="min-content" spacing={5}>
           {projects.map((project) => (
             <ProjectCard key={project.id} {...project} />

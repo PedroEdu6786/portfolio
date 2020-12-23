@@ -12,7 +12,7 @@ const SectionLayout = ({ children, ...rest }) => {
       my={32}
       mx="auto"
       py={12}
-      px={6}
+      px={{ base: 6, md: 10 }}
       pos="relative"
       overflow="hidden"
       {...rest}

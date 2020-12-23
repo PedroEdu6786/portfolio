@@ -7,7 +7,8 @@ import { skills } from '../../utils/skills'
 const Skills = () => {
   return (
     <>
-      <Stack spacing={8}>
+      <Stack spacing="6rem">
+        {/*-------------- DESCRIPTION -------------- */}
         <Stack spacing={6}>
           <SectionTitle
             heading="My Skills"
@@ -15,8 +16,10 @@ const Skills = () => {
             description="Skills I've developed through out my time"
           />
         </Stack>
+
+        {/*-------------- SKILLS -------------- */}
         <Box>
-          <Wrap spacing={14}>
+          <Wrap spacing={14} justify="space-between">
             {skills.map((skill) => (
               <WrapItem key={skill.id}>
                 <SkillsCard {...skill} />

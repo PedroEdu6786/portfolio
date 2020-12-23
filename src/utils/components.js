@@ -15,6 +15,8 @@ export const Button = {
     solid: {
       bg: 'portfolio.blue',
       color: 'portfolio.white',
+      border: '2px solid',
+      borderColor: 'portfolio.blue',
     },
   },
 

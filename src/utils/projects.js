@@ -7,20 +7,20 @@ export const projects = [
   },
   {
     id: 2,
-    legend: 'Front-End',
-    title: 'Landing Page Sun.mx',
-    description: '',
-  },
-  {
-    id: 3,
     legend: 'Back-End',
     title: 'Rest API',
     description: '',
   },
   {
-    id: 4,
+    id: 3,
     legend: 'Full-Stack',
     title: 'Ecommerce',
+    description: '',
+  },
+  {
+    id: 4,
+    legend: 'Front-End',
+    title: 'Landing Page Sun.mx',
     description: '',
   },
 ]

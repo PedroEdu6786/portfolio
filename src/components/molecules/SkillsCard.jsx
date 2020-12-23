@@ -16,14 +16,18 @@ const SkillsCard = ({ icon, title, skills }) => {
       templateColumns="100px auto"
       columnGap="1rem"
       spacing={1}
-      justify="center"
-      maxW="400px"
+      maxW={{ base: '400px', md: '330px' }}
     >
-      <Box alignSelf="center">{icon}</Box>
+      {/*-------------- SIDE ICON -------------- */}
+      <Box>{icon}</Box>
+
+      {/*-------------- SKILLS DESCRIPTION -------------- */}
       <Stack>
         <Heading as="h3" size="lg">
           {title}
         </Heading>
+
+        {/*-------------- SKILLS -------------- */}
         <Wrap spacing={1}>
           {skills.map((skill, key) => (
             <WrapItem key={key}>

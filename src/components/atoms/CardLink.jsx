@@ -6,8 +6,10 @@ import ReactIcon from './ReactIcon'
 const CardLink = () => {
   return (
     <Link pos="absolute" bottom="0" pb={5} color="portfolio.white" href="#">
+      {/*-------------- CONTENT -------------- */}
       <HStack align="center">
         <Text>See more</Text>
+        {/*-------------- ICON -------------- */}
         <ReactIcon icon={BsBoxArrowUpRight} color="portfolio.white" />
       </HStack>
     </Link>

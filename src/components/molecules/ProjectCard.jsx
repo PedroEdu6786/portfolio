@@ -18,11 +18,14 @@ const ProjectCard = ({ legend, title }) => {
       overflow="hidden"
       boxShadow="lg"
     >
+      {/*-------------- CARD CONTENT -------------- */}
       <Box pos="absolute" height="100%" zIndex="2" p={5}>
         <CardLegend>{legend}</CardLegend>
         <CardTitle>{title}</CardTitle>
         <CardLink />
       </Box>
+
+      {/*-------------- CARD FILTER -------------- */}
       <Box
         bgColor="portfolio.black"
         h="100%"
