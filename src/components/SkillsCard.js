@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Text, Container, HStack } from '@chakra-ui/react'
 
 const SkillsCard = ({ icon, title, skills }) => {
   return (
-    <HStack spacing={6} justify="center">
+    <HStack spacing={6} justify="center" w="300px">
       {icon}
       <Box ml="1rem">
         <Heading as="h3" size="lg">

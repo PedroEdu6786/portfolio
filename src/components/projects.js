@@ -1,13 +1,14 @@
 import React from 'react'
-import { Box, Flex, Heading, Text, Container, Spacer } from '@chakra-ui/react'
+import { Flex, Heading, Text, HStack, Stack } from '@chakra-ui/react'
+import SectionLayout from './SectionLayout'
 import ProjectCard from './ProjectCard'
 
 const Projects = () => {
   return (
-    <Box>
-      <Container p={7}>
+    <SectionLayout mt="8rem" mb={0} px={0}>
+      <Stack mx={6} spacing={6}>
         <Flex align="center">
-          <Heading pt={5} as="h2" fontSize="2.25rem">
+          <Heading as="h2" fontSize="2.25rem">
             My Work
           </Heading>
           <Heading
@@ -19,20 +20,17 @@ const Projects = () => {
             Projects
           </Heading>
         </Flex>
-        <Text pt={8}>Here is a list of projects I have developed</Text>
-      </Container>
-      <Flex pl={7} flex="1" mt={6} overflow="auto">
-        <Flex h="24rem" minH="min-content">
+        <Text>Here is a list of projects I have developed</Text>
+      </Stack>
+      <Flex px={6} flex="1" overflow="auto">
+        <HStack h="26rem" minH="min-content" spacing={5}>
           <ProjectCard />
-          <Spacer ml="1.25rem" />
           <ProjectCard />
-          <Spacer ml="1.25rem" />
           <ProjectCard />
-          <Spacer ml="1.25rem" />
           <ProjectCard />
-        </Flex>
+        </HStack>
       </Flex>
-    </Box>
+    </SectionLayout>
   )
 }
 

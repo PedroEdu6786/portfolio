@@ -14,7 +14,7 @@ const ProjectCard = () => {
       borderRadius=".5rem"
       pos="relative"
       overflow="hidden"
-      boxShadow="xl"
+      boxShadow="lg"
     >
       <Box pos="absolute" height="100%" zIndex="2" p={5}>
         <Text color="portfolio.white">Front-End</Text>

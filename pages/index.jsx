@@ -12,12 +12,10 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <Box mt="8rem" pos="relative" overflow="hidden" mb="4rem">
-        <Projects />
-        <Skills />
-        <About />
-        <Contact />
-      </Box>
+      <Projects />
+      <Skills />
+      <About />
+      <Contact />
       <Footer />
     </>
   )
