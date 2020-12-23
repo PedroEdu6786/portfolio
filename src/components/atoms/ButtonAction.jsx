@@ -1,9 +1,9 @@
 import React from 'react'
 import { Button } from '@chakra-ui/react'
 
-const ButtonAction = ({ children, primary }) => {
+const ButtonAction = ({ children, ...rest }) => {
   return (
-    <Button colorScheme="teal" variant={primary ? 'solid' : 'outline'}>
+    <Button _hover={{ opacity: '.8' }} _focus={{ opacity: '.8' }} {...rest}>
       {children}
     </Button>
   )

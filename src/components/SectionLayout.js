@@ -9,8 +9,7 @@ const SectionLayout = ({ children, ...rest }) => {
       templateColumns="100%"
       columnGap={8}
       w="100%"
-      mt={15}
-      mb={20}
+      my={32}
       mx="auto"
       py={12}
       px={6}

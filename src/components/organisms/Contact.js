@@ -4,12 +4,10 @@ import {
   Flex,
   Heading,
   Text,
-  Button,
   Stack,
   HStack,
   Link as LinkC,
 } from '@chakra-ui/react'
-
 import {
   FormControl,
   FormLabel,
@@ -19,30 +17,20 @@ import {
   Textarea,
 } from '@chakra-ui/react'
 import { HiOutlineMail } from 'react-icons/hi'
-
-import SectionLayout from './SectionLayout'
+import SectionTitle from '../molecules/SectionTitle'
+import ButtonAction from '../atoms/ButtonAction'
 
 const Contact = () => {
   return (
-    <SectionLayout>
+    <>
       <Stack spacing={6}>
-        <Flex align="center">
-          <Heading as="h2" fontSize="2.25rem">
-            Let's make things happen
-          </Heading>
-          <Heading
-            pos="absolute"
-            fontSize="7rem"
-            opacity=".1"
-            color="portfolio.blue"
-          >
-            Contact
-          </Heading>
-        </Flex>
-        <Text>
-          Now that you’ve seen what i can do, let’s get in touch and start
-          making magic together!
-        </Text>
+        <SectionTitle
+          heading="Let's make things happen"
+          shadow="Contact"
+          description="Now that you’ve seen what i can do, let’s get in touch and start
+          making magic together!"
+        />
+
         <LinkC href="mailto:pedrcg835@gmail.com" target="_blank">
           <HStack>
             <HiOutlineMail fontSize="1.5rem" />
@@ -54,6 +42,7 @@ const Contact = () => {
             <Box>
               <FormLabel>Whats your name?</FormLabel>
               <Input
+                id="nameInput"
                 bg="portfolio.lightBlue"
                 type="text"
                 variant="filled"
@@ -63,6 +52,7 @@ const Contact = () => {
             <Box>
               <FormLabel>Provide me your email</FormLabel>
               <Input
+                id="emailInput"
                 bg="portfolio.lightBlue"
                 type="email"
                 variant="filled"
@@ -76,13 +66,11 @@ const Contact = () => {
                 placeholder="I just wanna chat for a while, you seem interesting"
               />
             </Box>
-            <Button bgColor="portfolio.blue" color="portfolio.white">
-              Let's get in touch
-            </Button>
+            <ButtonAction variant="solid">Let's get in touch</ButtonAction>
           </Stack>
         </FormControl>
       </Stack>
-    </SectionLayout>
+    </>
   )
 }
 
