@@ -1,5 +1,6 @@
 import React from 'react'
 import { Input } from '@chakra-ui/react'
+import { LIGHT_BLUE } from '../../utils/colors'
 
 const InputForm = ({ id, type, placeholder }) => {
   return (
@@ -7,7 +8,7 @@ const InputForm = ({ id, type, placeholder }) => {
       id={id}
       type={type}
       placeholder={placeholder}
-      bg="portfolio.lightBlue"
+      bg={LIGHT_BLUE}
       variant="filled"
     />
   )

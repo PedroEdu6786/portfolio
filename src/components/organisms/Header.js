@@ -1,23 +1,18 @@
-import { useRef } from 'react'
-import { Box, Flex, Heading, HStack } from '@chakra-ui/react'
-import {
-  Drawer,
-  DrawerBody,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  useDisclosure,
-} from '@chakra-ui/react'
+import { useState } from 'react'
+import { Box, Heading, Stack } from '@chakra-ui/react'
 import MenuItem from '../atoms/MenuItem'
 import MenuIcon from '../atoms/MenuIcon'
 
 const Header = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = useRef()
+  const [show, setShow] = useState(false)
+
+  const toggleMenu = () => {
+    setShow(!show)
+    console.log(show)
+  }
 
   return (
-    <HStack align="center" justify="space-between">
+    <Stack as="header" direction="row" align="center" justify="space-between">
       {/*-------------- LOGO -------------- */}
       <Box alignSelf="center">
         <Heading as="h3" size="sm">
@@ -26,38 +21,25 @@ const Header = () => {
       </Box>
 
       {/*-------------- NAVBAR -------------- */}
-      <HStack display={{ base: 'flex', md: 'none' }}>
+      <Stack direction="row" align="center">
         <MenuItem isFirst to="#projects">
           Projects
         </MenuItem>
-        <Box onClick={onOpen}>
+        <Stack
+          direction={{ base: 'column', md: 'row' }}
+          display={show ? { base: 'flex' } : { base: 'none', md: 'flex' }}
+        >
+          <MenuItem to="#skills">Skills</MenuItem>
+          <MenuItem to="#about">About</MenuItem>
+          <MenuItem to="#contact">Contact</MenuItem>
+        </Stack>
+        <Box display={{ base: 'flex', md: 'none' }} onClick={toggleMenu}>
           <MenuIcon />
         </Box>
-      </HStack>
+      </Stack>
 
       {/*-------------- SIDEBAR -------------- */}
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-      >
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader></DrawerHeader>
-            <DrawerBody>
-              <Flex direction="column">
-                <MenuItem>Home</MenuItem>
-                <MenuItem>Home</MenuItem>
-                <MenuItem>Home</MenuItem>
-                <MenuItem>Home</MenuItem>
-              </Flex>
-            </DrawerBody>
-          </DrawerContent>
-        </DrawerOverlay>
-      </Drawer>
-    </HStack>
+    </Stack>
   )
 }
 

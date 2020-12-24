@@ -7,36 +7,48 @@ import About from '../src/components/organisms/About'
 import Contact from '../src/components/organisms/Contact'
 import Footer from '../src/components/organisms/Footer'
 import SectionLayout from '../src/components/SectionLayout'
+import HeroLayout from '../src/components/HeroLayout'
+import { LIGHT_BLUE, WHITE } from '../src/utils/colors'
 
 export default function Home() {
   return (
-    <>
-      <SectionLayout as="header" p={7} my={0} mx="auto">
-        <Header />
-      </SectionLayout>
-      <SectionLayout
-        mt={{ base: '2rem', md: '4rem' }}
-        mb={{ md: '6rem' }}
-        pb={{ base: '14rem', md: '5rem' }}
-        pt={{ md: '4rem' }}
-      >
-        <Hero />
-      </SectionLayout>
-      <SectionLayout id="projects" mt="8rem" mb={0} px={0}>
+    <Box bgColor={WHITE}>
+      <Box h={{ md: '100vh' }}>
+        {/*-------------- HEADER -------------- */}
+        <SectionLayout as="section" h="6rem" p={7} my={0} mx="auto">
+          <Header />
+        </SectionLayout>
+
+        {/*-------------- HERO -------------- */}
+        <HeroLayout as="section" mb={{ md: '6rem' }} pb={{ base: '14rem' }}>
+          <Hero />
+        </HeroLayout>
+      </Box>
+
+      {/*-------------- PROJECTS -------------- */}
+      <SectionLayout as="section" id="projects" mt="8rem" mb={0} px={0}>
         <Projects />
       </SectionLayout>
-      <SectionLayout id="skills">
+
+      {/*-------------- SKILLS -------------- */}
+      <SectionLayout as="section" id="skills">
         <Skills />
       </SectionLayout>
-      <Box id="about" py={{ md: '1' }} bgColor="portfolio.lightBlue" w="100%">
-        <SectionLayout>
+
+      {/*-------------- ABOUT -------------- */}
+      <Box id="about" py={{ md: '1' }} bgColor={LIGHT_BLUE} w="100%">
+        <SectionLayout as="section">
           <About />
         </SectionLayout>
       </Box>
-      <SectionLayout id="contact">
+
+      {/*-------------- CONTACT -------------- */}
+      <SectionLayout as="section" id="contact">
         <Contact />
       </SectionLayout>
+
+      {/*-------------- FOOTER -------------- */}
       <Footer />
-    </>
+    </Box>
   )
 }

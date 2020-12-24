@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Box,
   Wrap,
@@ -8,6 +9,7 @@ import {
   Stack,
   SimpleGrid,
 } from '@chakra-ui/react'
+import { LIGHT_BLUE } from '../../utils/colors'
 
 const SkillsCard = ({ icon, title, skills }) => {
   return (
@@ -33,7 +35,7 @@ const SkillsCard = ({ icon, title, skills }) => {
             <WrapItem key={key}>
               <Text
                 fontSize=".85rem"
-                bg="portfolio.lightBlue"
+                bg={LIGHT_BLUE}
                 borderRadius={15}
                 p={1}
                 px={3}
@@ -46,6 +48,12 @@ const SkillsCard = ({ icon, title, skills }) => {
       </Stack>
     </SimpleGrid>
   )
+}
+
+SkillsCard.propTypes = {
+  icon: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired,
+  skills: PropTypes.array.isRequired,
 }
 
 export default SkillsCard

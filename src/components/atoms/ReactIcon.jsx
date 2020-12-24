@@ -1,7 +1,6 @@
 import React from 'react'
 import { Icon } from '@chakra-ui/react'
-
-const BLACK = 'portfolio.black'
+import { BLACK } from '../../utils/colors'
 
 const ReactIcon = ({ icon, ...rest }) => {
   return <Icon as={icon} color={BLACK} {...rest} />

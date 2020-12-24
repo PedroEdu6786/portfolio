@@ -2,8 +2,8 @@ import { BsFillPeopleFill, BsCodeSlash, BsLaptop } from 'react-icons/bs'
 import { MdWeb } from 'react-icons/md'
 import { RiUmbrellaLine } from 'react-icons/ri'
 import ReactIcon from '../components/atoms/ReactIcon'
+import { BLUE } from './colors'
 
-const BLUE = 'portfolio.blue'
 const SIZE = '6rem'
 
 export const skills = [

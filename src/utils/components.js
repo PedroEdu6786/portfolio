@@ -1,3 +1,5 @@
+import { BLUE, WHITE } from './colors'
+
 export const Button = {
   // The styles all button have in common
   baseStyle: {
@@ -10,13 +12,13 @@ export const Button = {
   variants: {
     outline: {
       border: '2px solid',
-      borderColor: 'portfolio.blue',
+      borderColor: BLUE,
     },
     solid: {
-      bg: 'portfolio.blue',
-      color: 'portfolio.white',
+      bg: BLUE,
+      color: WHITE,
       border: '2px solid',
-      borderColor: 'portfolio.blue',
+      borderColor: BLUE,
     },
   },
 

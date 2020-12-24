@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Flex } from '@chakra-ui/react'
 import Subtitle from '../atoms/Subtitle'
 import ShadowTitle from '../atoms/ShadowTitle'
@@ -14,6 +15,12 @@ const SectionTitle = ({ heading, shadow, description }) => {
       <Description>{description}</Description>
     </>
   )
+}
+
+SectionTitle.propTypes = {
+  heading: PropTypes.string.isRequired,
+  shadow: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 }
 
 export default SectionTitle

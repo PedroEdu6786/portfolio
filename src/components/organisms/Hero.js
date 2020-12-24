@@ -1,12 +1,10 @@
 import React from 'react'
 import { Box, Stack, Image } from '@chakra-ui/react'
-import { AiFillGithub } from 'react-icons/ai'
-import { FaLinkedinIn, FaInstagram } from 'react-icons/fa'
 import ButtonAction from '../atoms/ButtonAction'
 import TitleVariant from '../atoms/TitleVariant'
 import Title from '../atoms/Title'
 import Description from '../atoms/Description'
-import ReactIcon from '../atoms/ReactIcon'
+import SocialMedia from '../molecules/SocialMedia'
 
 const Hero = () => {
   return (
@@ -46,7 +44,7 @@ const Hero = () => {
         </Stack>
 
         {/*-------------- BUTTONS -------------- */}
-        <Stack align="center" direction={['column', 'row']}>
+        <Stack direction={['column', 'row']}>
           <ButtonAction display="flex" variant="solid" maxW="11rem">
             Download my CV
           </ButtonAction>
@@ -64,9 +62,7 @@ const Hero = () => {
         fontSize="xl"
         direction={{ base: 'column', md: 'row' }}
       >
-        <ReactIcon fontSize="1.6rem" icon={AiFillGithub} />
-        <ReactIcon fontSize="1.6rem" icon={FaLinkedinIn} />
-        <ReactIcon fontSize="1.6rem" icon={FaInstagram} />
+        <SocialMedia />
       </Stack>
     </Box>
   )

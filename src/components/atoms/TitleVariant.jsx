@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box } from '@chakra-ui/react'
-
-const BLUE = 'portfolio.blue'
+import { BLUE } from '../../utils/colors'
 
 const TitleVariant = ({ children, ...rest }) => {
   return (
