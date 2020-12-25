@@ -17,14 +17,14 @@ const About = () => {
           boxSize={{ base: '300px', md: '325px', lg: '350px' }}
           pos="absolute"
           bottom="0"
-          src="/blob.svg"
+          src="/images/blob.svg"
           alt="blob"
         />
         <Image
           zIndex="2"
           pos="relative"
           maxW={{ base: '250px', md: '275px', lg: '300px' }}
-          src="/hero-img.png"
+          src="/images/hero-img.png"
         />
       </Flex>
 

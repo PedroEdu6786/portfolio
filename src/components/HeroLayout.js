@@ -5,12 +5,15 @@ import { Grid } from '@chakra-ui/react'
 const HeroLayout = ({ children, ...rest }) => {
   return (
     <Grid
+      as="section"
+      h={{ base: '35rem', md: '70vh' }}
       maxW="1024px"
       templateColumns="100%"
       columnGap={8}
       w="100%"
       mx="auto"
       mt="4rem"
+      mb={{ md: '6rem' }}
       px={{ base: 6, md: 10 }}
       pos="relative"
       overflow="hidden"

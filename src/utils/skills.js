@@ -4,7 +4,7 @@ import { RiUmbrellaLine } from 'react-icons/ri'
 import ReactIcon from '../components/atoms/ReactIcon'
 import { BLUE } from './colors'
 
-const SIZE = '6rem'
+const SIZE = '5rem'
 
 export const skills = [
   {

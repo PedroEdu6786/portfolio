@@ -16,16 +16,15 @@ const SkillsCard = ({ icon, title, skills }) => {
     <SimpleGrid
       columns={2}
       templateColumns="100px auto"
-      columnGap="1rem"
       spacing={1}
-      maxW={{ base: '400px', md: '330px' }}
+      maxW={{ base: '400px', md: '300px', lg: '400px' }}
     >
       {/*-------------- SIDE ICON -------------- */}
       <Box>{icon}</Box>
 
       {/*-------------- SKILLS DESCRIPTION -------------- */}
       <Stack>
-        <Heading as="h3" size="lg">
+        <Heading as="h3" size="lg" fontWeight="semibold">
           {title}
         </Heading>
 

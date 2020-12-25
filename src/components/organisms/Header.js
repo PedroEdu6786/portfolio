@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Heading, Stack } from '@chakra-ui/react'
+import { Box, Heading, Stack, Link } from '@chakra-ui/react'
 import MenuItem from '../atoms/MenuItem'
 import MenuIcon from '../atoms/MenuIcon'
 
@@ -16,7 +16,7 @@ const Header = () => {
       {/*-------------- LOGO -------------- */}
       <Box alignSelf="center">
         <Heading as="h3" size="sm">
-          Pedro Cruz
+          <Link href="#">Pedro Cruz</Link>
         </Heading>
       </Box>
 
@@ -37,8 +37,6 @@ const Header = () => {
           <MenuIcon />
         </Box>
       </Stack>
-
-      {/*-------------- SIDEBAR -------------- */}
     </Stack>
   )
 }

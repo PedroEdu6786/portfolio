@@ -15,35 +15,35 @@ export default function Home() {
     <Box bgColor={WHITE}>
       <Box h={{ md: '100vh' }}>
         {/*-------------- HEADER -------------- */}
-        <SectionLayout as="section" h="6rem" p={7} my={0} mx="auto">
+        <SectionLayout p={7} my={0} mx="auto">
           <Header />
         </SectionLayout>
 
         {/*-------------- HERO -------------- */}
-        <HeroLayout as="section" mb={{ md: '6rem' }} pb={{ base: '14rem' }}>
+        <HeroLayout>
           <Hero />
         </HeroLayout>
       </Box>
 
       {/*-------------- PROJECTS -------------- */}
-      <SectionLayout as="section" id="projects" mt="8rem" mb={0} px={0}>
+      <SectionLayout id="projects" mt="8rem" mb={0} px={0}>
         <Projects />
       </SectionLayout>
 
       {/*-------------- SKILLS -------------- */}
-      <SectionLayout as="section" id="skills">
+      <SectionLayout id="skills">
         <Skills />
       </SectionLayout>
 
       {/*-------------- ABOUT -------------- */}
       <Box id="about" py={{ md: '1' }} bgColor={LIGHT_BLUE} w="100%">
-        <SectionLayout as="section">
+        <SectionLayout>
           <About />
         </SectionLayout>
       </Box>
 
       {/*-------------- CONTACT -------------- */}
-      <SectionLayout as="section" id="contact">
+      <SectionLayout id="contact">
         <Contact />
       </SectionLayout>
 

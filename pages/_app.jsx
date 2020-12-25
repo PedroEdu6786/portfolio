@@ -1,8 +1,10 @@
 import { ChakraProvider, extendTheme, CSSReset } from '@chakra-ui/react'
-import theme from '../src/utils/theme'
+import { createBreakpoints } from '@chakra-ui/theme-tools'
+import { theme, breakpoints } from '../src/utils/theme'
 import '../styles/global.css'
 
-const newTheme = extendTheme(theme)
+const newBreakpoints = createBreakpoints(breakpoints)
+const newTheme = extendTheme({ ...theme, ...newBreakpoints })
 
 function MyApp({ Component, pageProps }) {
   return (

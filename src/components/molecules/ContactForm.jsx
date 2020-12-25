@@ -1,37 +1,77 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Stack, FormControl, FormLabel } from '@chakra-ui/react'
 import ButtonAction from '../atoms/ButtonAction'
 import InputForm from '../atoms/InputForm'
 import AreaForm from '../atoms/AreaForm'
 
 const ContactForm = ({ ...rest }) => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [body, setBody] = useState('')
+
+  /*-------------- FORM VALUES -------------- */
+  const handleName = (e) => setName(e.target.value)
+
+  const handleEmail = (e) => setEmail(e.target.value)
+
+  const handleSubject = (e) => setSubject(e.target.value)
+
+  const handleBody = (e) => setBody(e.target.value)
+
+  /*-------------- FORM SUBMIT -------------- */
+  const handleSubmit = () => {}
+
   return (
     <FormControl {...rest}>
       <Stack spacing={3}>
         {/*-------------- NAME INPUT -------------- */}
         <Box>
-          <FormLabel>Whats your name?</FormLabel>
-          <InputForm id="nameInput" type="text" placeholder="John Doe" />
+          <FormLabel>What's your name?</FormLabel>
+          <InputForm
+            id="nameInput"
+            type="text"
+            placeholder="John Doe"
+            onChange={handleName}
+          />
+        </Box>
+
+        <Box>
+          <FormLabel>What's email?</FormLabel>
+          <InputForm
+            id="nameInput"
+            type="text"
+            placeholder="yourock@email.com"
+            onChange={handleEmail}
+          />
         </Box>
 
         {/*-------------- EMAIL INPUT -------------- */}
         <Box>
-          <FormLabel>Provide me your email</FormLabel>
+          <FormLabel>What's the subject about?</FormLabel>
           <InputForm
             id="emailInput"
             type="email"
-            placeholder="yourock@email.com"
+            placeholder="New Project"
+            onChange={handleSubject}
           />
         </Box>
 
         {/*-------------- TEXT AREA -------------- */}
         <Box>
           <FormLabel>What's up?</FormLabel>
-          <AreaForm placeholder="I just wanna chat for a while, you seem interesting" />
+          <AreaForm
+            placeholder="Hello, my name is John Doe, I just wanna chat for a bit"
+            onChange={handleBody}
+          />
         </Box>
 
         {/*-------------- ACTION -------------- */}
-        <ButtonAction variant="solid" maxW={{ md: '14rem' }}>
+        <ButtonAction
+          variant="solid"
+          maxW={{ md: '14rem' }}
+          onClick={handleSubmit}
+        >
           Let's get in touch
         </ButtonAction>
       </Stack>

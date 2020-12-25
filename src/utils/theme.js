@@ -1,6 +1,13 @@
 import { Button } from './components'
 
-const theme = {
+export const breakpoints = {
+  sm: '25em',
+  md: '48em',
+  lg: '62em',
+  xl: '80em',
+}
+
+export const theme = {
   colors: {
     portfolio: {
       gray: '#EAEAEA',
@@ -17,5 +24,3 @@ const theme = {
     Button,
   },
 }
-
-export default theme

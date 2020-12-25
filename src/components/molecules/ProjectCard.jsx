@@ -9,7 +9,7 @@ import { BLACK } from '../../utils/colors'
 const ProjectCard = ({ legend, title }) => {
   return (
     <Box
-      bgImage="url('/project.png')"
+      bgImage="url('/images/project.png')"
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
