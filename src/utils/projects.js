@@ -35,4 +35,10 @@ export const projects = [
     title: 'Landing Page Sun.mx',
     description: '',
   },
+  {
+    id: 7,
+    legend: 'Front-End',
+    title: 'Landing Page Sun.mx',
+    description: '',
+  },
 ]

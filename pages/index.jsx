@@ -36,7 +36,7 @@ export default function Home() {
       </SectionLayout>
 
       {/*-------------- ABOUT -------------- */}
-      <Box id="about" py={{ md: '1' }} bgColor={LIGHT_BLUE} w="100%">
+      <Box id="about" my="10rem" bgColor={LIGHT_BLUE} w="100%">
         <SectionLayout>
           <About />
         </SectionLayout>

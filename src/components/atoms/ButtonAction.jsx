@@ -11,7 +11,11 @@ const ButtonStyled = styled(Button)`
 `
 
 const ButtonAction = ({ children, ...rest }) => {
-  return <Button {...rest}>{children}</Button>
+  return (
+    <Button fontSize={{ base: 'md', md: 'lg' }} {...rest}>
+      {children}
+    </Button>
+  )
 }
 
 export default ButtonAction

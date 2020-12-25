@@ -13,10 +13,10 @@ const ProjectCard = ({ legend, title }) => {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
-      w="14rem"
-      h="22rem"
+      w={{ base: '14rem', lg: '16rem' }}
+      h={{ base: '22rem', lg: '26rem' }}
       borderRadius=".5rem"
-      mt="1rem"
+      mt="3rem"
       mr="1rem"
       ml="0"
       pos="relative"

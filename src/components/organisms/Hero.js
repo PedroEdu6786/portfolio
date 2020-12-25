@@ -37,7 +37,7 @@ const Hero = () => {
         />
       </Box>
 
-      <Stack spacing={{ base: 4, md: 8 }} pos="relative" zIndex="1">
+      <Stack spacing={8} pos="relative" zIndex="1">
         {/*-------------- HEADINGS -------------- */}
         <Stack
           maxW={{ base: '500px', lg: '600px' }}
@@ -58,12 +58,12 @@ const Hero = () => {
           <ButtonAction
             display="flex"
             variant="solid"
-            maxW="11rem"
+            maxW="12rem"
             onClick={downloadCv}
           >
             Download my CV
           </ButtonAction>
-          <ButtonAction display="flex" variant="outline" maxW="11rem">
+          <ButtonAction display="flex" variant="outline" maxW="12rem">
             Change mood
           </ButtonAction>
         </Stack>

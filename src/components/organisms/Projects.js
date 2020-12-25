@@ -20,6 +20,7 @@ const Projects = () => {
       <Flex mt="2rem" px={{ base: 6, md: 10 }} flex="1" overflow="auto">
         <Stack
           direction="horizontal"
+          justify="space-evenly"
           h="100%"
           minH="min-content"
           wrap={{ lg: 'wrap' }}
