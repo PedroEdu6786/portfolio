@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, HStack, Stack } from '@chakra-ui/react'
+import { Flex, Stack } from '@chakra-ui/react'
 import ProjectCard from '../molecules/ProjectCard.jsx'
 import SectionTitle from '../molecules/SectionTitle'
 import { projects } from '../../utils/projects'
@@ -17,12 +17,17 @@ const Projects = () => {
       </Stack>
 
       {/*-------------- PROJECTS -------------- */}
-      <Flex px={{ base: 6, md: 10 }} flex="1" overflow="auto">
-        <HStack h="26rem" minH="min-content" spacing={5}>
+      <Flex mt="2rem" px={{ base: 6, md: 10 }} flex="1" overflow="auto">
+        <Stack
+          direction="horizontal"
+          h="100%"
+          minH="min-content"
+          wrap={{ lg: 'wrap' }}
+        >
           {projects.map((project) => (
             <ProjectCard key={project.id} {...project} />
           ))}
-        </HStack>
+        </Stack>
       </Flex>
     </>
   )

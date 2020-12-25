@@ -19,7 +19,7 @@ const Skills = () => {
 
         {/*-------------- SKILLS -------------- */}
         <Box>
-          <Wrap spacing={14} justify="space-between">
+          <Wrap spacing={14}>
             {skills.map((skill) => (
               <WrapItem key={skill.id}>
                 <SkillsCard {...skill} />

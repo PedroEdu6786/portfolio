@@ -26,7 +26,7 @@ export default function Home() {
       </Box>
 
       {/*-------------- PROJECTS -------------- */}
-      <SectionLayout id="projects" mt="8rem" mb={0} px={0}>
+      <SectionLayout id="projects" mb={0} px={0}>
         <Projects />
       </SectionLayout>
 

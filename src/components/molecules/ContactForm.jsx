@@ -24,7 +24,7 @@ const ContactForm = ({ ...rest }) => {
 
   return (
     <FormControl {...rest}>
-      <Stack spacing={3}>
+      <Stack spacing={3} justify="space-between" maxW="500px">
         {/*-------------- NAME INPUT -------------- */}
         <Box>
           <FormLabel>What's your name?</FormLabel>

@@ -23,4 +23,16 @@ export const projects = [
     title: 'Landing Page Sun.mx',
     description: '',
   },
+  {
+    id: 5,
+    legend: 'Front-End',
+    title: 'Landing Page Sun.mx',
+    description: '',
+  },
+  {
+    id: 6,
+    legend: 'Front-End',
+    title: 'Landing Page Sun.mx',
+    description: '',
+  },
 ]

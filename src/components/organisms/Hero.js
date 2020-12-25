@@ -16,21 +16,21 @@ const Hero = () => {
       {/*-------------- PICTURES -------------- */}
       <Box>
         <Image
-          mr={{ base: '-25vw', sm: '-10vw', md: '0' }}
+          mr={{ base: '-20vw', sm: '-10vw', md: '0' }}
           pos="absolute"
           bottom="-7"
           right="0"
-          boxSize={{ base: '300px', md: '325px', lg: '350px' }}
+          boxSize={{ base: '300px', md: '325px', lg: '400px' }}
           zIndex="0"
           src="/images/blob.svg"
           alt="blob"
         />
         <Image
-          mr={{ base: '-25vw', sm: '-10vw', md: '0' }}
+          mr={{ base: '-20vw', sm: '-10vw', md: '0' }}
           pos="absolute"
           bottom="-7"
           right="0"
-          maxW={{ base: '250px', md: '275px', lg: '300px' }}
+          maxW={{ base: '250px', md: '275px', lg: '350px' }}
           zIndex="0"
           src="/images/hero-img.png"
           alt="It'sMe"
@@ -39,7 +39,11 @@ const Hero = () => {
 
       <Stack spacing={{ base: 4, md: 8 }} pos="relative" zIndex="1">
         {/*-------------- HEADINGS -------------- */}
-        <Stack maxW="500px" spacing={{ base: 4, md: 8 }}>
+        <Stack
+          maxW={{ base: '500px', lg: '600px' }}
+          pt={{ md: '8vh' }}
+          spacing={{ base: 4, md: 8 }}
+        >
           <Title>
             I develop <TitleVariant>dreams</TitleVariant> and{' '}
             <TitleVariant>smiles</TitleVariant>
