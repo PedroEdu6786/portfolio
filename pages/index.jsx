@@ -7,17 +7,18 @@ import About from '../src/components/organisms/About'
 import Contact from '../src/components/organisms/Contact'
 import Footer from '../src/components/organisms/Footer'
 import SectionLayout from '../src/components/SectionLayout'
+import HeaderLayout from '../src/components/HeaderLayout'
 import HeroLayout from '../src/components/HeroLayout'
-import { LIGHT_BLUE, WHITE } from '../src/utils/colors'
+import { LIGHT_BLUE } from '../src/utils/colors'
 
 export default function Home() {
   return (
-    <Box bgColor={WHITE}>
+    <>
       <Box h={{ md: '100vh' }}>
         {/*-------------- HEADER -------------- */}
-        <SectionLayout p={7} my={0} mx="auto">
+        <HeaderLayout>
           <Header />
-        </SectionLayout>
+        </HeaderLayout>
 
         {/*-------------- HERO -------------- */}
         <HeroLayout>
@@ -49,6 +50,6 @@ export default function Home() {
 
       {/*-------------- FOOTER -------------- */}
       <Footer />
-    </Box>
+    </>
   )
 }

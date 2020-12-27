@@ -1,4 +1,5 @@
 import { Button } from './components'
+import { WHITE } from './colors'
 
 export const breakpoints = {
   sm: '25em',
@@ -8,6 +9,13 @@ export const breakpoints = {
 }
 
 export const theme = {
+  styles: {
+    global: {
+      body: {
+        bg: WHITE,
+      },
+    },
+  },
   colors: {
     portfolio: {
       gray: '#EAEAEA',

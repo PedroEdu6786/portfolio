@@ -1,18 +1,16 @@
 import React from 'react'
-import { chakra } from '@chakra-ui/react'
-import Image from 'next/image'
-
-const ProductImage = chakra(Image)
+import { Image } from '@chakra-ui/react'
 
 const HeroImage = ({ src, alt, ...rest }) => {
   return (
-    <ProductImage
-      src={src}
-      alt={alt}
+    <Image
+      mr={{ base: '-20vw', sm: '-10vw', md: '0' }}
       pos="absolute"
       bottom="-7"
       right="0"
-      mr="-4rem"
+      zIndex="0"
+      src={src}
+      alt={alt}
       {...rest}
     />
   )

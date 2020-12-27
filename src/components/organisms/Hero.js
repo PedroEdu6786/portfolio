@@ -1,10 +1,11 @@
 import React from 'react'
-import { Box, Stack, Image } from '@chakra-ui/react'
-import ButtonAction from '../atoms/ButtonAction'
-import TitleVariant from '../atoms/TitleVariant'
-import Title from '../atoms/Title'
-import Description from '../atoms/Description'
+import { Box, Stack } from '@chakra-ui/react'
 import SocialMedia from '../molecules/SocialMedia'
+import Title from '../atoms/Title'
+import TitleVariant from '../atoms/TitleVariant'
+import Description from '../atoms/Description'
+import ButtonAction from '../atoms/ButtonAction'
+import HeroImage from '../atoms/HeroImage'
 
 const Hero = () => {
   const downloadCv = () => {
@@ -15,23 +16,13 @@ const Hero = () => {
     <Box>
       {/*-------------- PICTURES -------------- */}
       <Box>
-        <Image
-          mr={{ base: '-20vw', sm: '-10vw', md: '0' }}
-          pos="absolute"
-          bottom="-7"
-          right="0"
+        <HeroImage
           boxSize={{ base: '300px', md: '325px', lg: '400px' }}
-          zIndex="0"
           src="/images/blob.svg"
           alt="blob"
         />
-        <Image
-          mr={{ base: '-20vw', sm: '-10vw', md: '0' }}
-          pos="absolute"
-          bottom="-7"
-          right="0"
+        <HeroImage
           maxW={{ base: '250px', md: '275px', lg: '350px' }}
-          zIndex="0"
           src="/images/hero-img.png"
           alt="It'sMe"
         />

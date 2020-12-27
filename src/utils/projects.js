@@ -26,19 +26,19 @@ export const projects = [
   {
     id: 5,
     legend: 'Front-End',
-    title: 'Landing Page Sun.mx',
+    title: 'Movie Searcher',
     description: '',
   },
   {
     id: 6,
     legend: 'Front-End',
-    title: 'Landing Page Sun.mx',
+    title: 'Todo App',
     description: '',
   },
   {
     id: 7,
     legend: 'Front-End',
-    title: 'Landing Page Sun.mx',
+    title: 'Github status checker',
     description: '',
   },
 ]
