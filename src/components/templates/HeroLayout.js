@@ -12,7 +12,7 @@ const HeroLayout = ({ children, ...rest }) => {
       columnGap={8}
       w="100%"
       mx="auto"
-      mt="7rem"
+      mt="9rem"
       mb={{ base: '6rem' }}
       px={{ base: 6, md: 10 }}
       pos="relative"

@@ -10,7 +10,7 @@ const Footer = () => {
         Made with love by Pedro Cruz
       </Center>
       <Center>
-        <SocialMedia m={1} color={LIGHT_BLUE} />
+        <SocialMedia color={LIGHT_BLUE} />
       </Center>
     </Stack>
   )

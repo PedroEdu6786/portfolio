@@ -67,11 +67,7 @@ const ContactForm = ({ ...rest }) => {
         </Box>
 
         {/*-------------- ACTION -------------- */}
-        <ButtonAction
-          variant="solid"
-          maxW={{ md: '14rem' }}
-          onClick={handleSubmit}
-        >
+        <ButtonAction primary maxW={{ md: '14rem' }} onClick={handleSubmit}>
           Let's get in touch
         </ButtonAction>
       </Stack>

@@ -1,17 +1,14 @@
 import { useState } from 'react'
 import { Box, Heading, Stack, Link } from '@chakra-ui/react'
-import NavLayout from '../NavLayout'
-import NavbarLayout from '../NavbarLayout'
+import NavLayout from '../templates/NavLayout'
+import NavbarLayout from '../templates/NavbarLayout'
 import MenuItem from '../atoms/MenuItem'
 import MenuIcon from '../atoms/MenuIcon'
 
 const Header = () => {
   const [show, setShow] = useState(false)
 
-  const toggleMenu = () => {
-    setShow(!show)
-    console.log(show)
-  }
+  const toggleMenu = () => setShow(!show)
 
   return (
     <NavLayout as="header">
@@ -22,19 +19,18 @@ const Header = () => {
         </Heading>
       </Box>
 
-      <Stack
-        display={{ base: 'flex', md: 'none' }}
-        direction="row"
-        onClick={toggleMenu}
-      >
+      {/*-------------- MENU ICON AND CLICK TO ACTION PROJECTS -------------- */}
+      <Stack display={{ base: 'flex', md: 'none' }} direction="row">
         <MenuItem isFirst to="#projects">
           Projects
         </MenuItem>
-        <MenuIcon />
+        <Box onClick={toggleMenu}>
+          <MenuIcon />
+        </Box>
       </Stack>
 
       {/*-------------- NAVBAR -------------- */}
-      <NavbarLayout as="nav" right={show ? '-100%' : 0}>
+      <NavbarLayout as="nav" right={show ? 0 : '-100%'}>
         <Stack
           spacing={{ base: '2rem', md: '1rem' }}
           align="center"
@@ -47,9 +43,15 @@ const Header = () => {
           >
             Projects
           </MenuItem>
-          <MenuItem to="#skills">Skills</MenuItem>
-          <MenuItem to="#about">About</MenuItem>
-          <MenuItem to="#contact">Contact</MenuItem>
+          <MenuItem to="#skills" onClick={toggleMenu}>
+            Skills
+          </MenuItem>
+          <MenuItem to="#about" onClick={toggleMenu}>
+            About
+          </MenuItem>
+          <MenuItem to="#contact" onClick={toggleMenu}>
+            Contact
+          </MenuItem>
         </Stack>
       </NavbarLayout>
     </NavLayout>

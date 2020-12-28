@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from '@chakra-ui/react'
-import { WHITE } from '../utils/colors'
+import { WHITE } from '../../utils/colors'
 
 const HeaderLayout = ({ children, ...rest }) => {
   return (
@@ -17,6 +17,7 @@ const HeaderLayout = ({ children, ...rest }) => {
       px={{ base: 6, md: 10 }}
       bgColor={WHITE}
       maxW="1400px"
+      zIndex="10"
       {...rest}
     >
       {children}

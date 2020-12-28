@@ -6,19 +6,30 @@ import Skills from '../src/components/organisms/Skills'
 import About from '../src/components/organisms/About'
 import Contact from '../src/components/organisms/Contact'
 import Footer from '../src/components/organisms/Footer'
-import SectionLayout from '../src/components/SectionLayout'
-import HeaderLayout from '../src/components/HeaderLayout'
-import HeroLayout from '../src/components/HeroLayout'
-import { LIGHT_BLUE } from '../src/utils/colors'
+import SectionLayout from '../src/components/templates/SectionLayout'
+import HeaderLayout from '../src/components/templates/HeaderLayout'
+import HeroLayout from '../src/components/templates/HeroLayout'
+import { LIGHT_BLUE, WHITE } from '../src/utils/colors'
 
 export default function Home() {
   return (
     <>
       <Box h={{ md: '100vh' }}>
         {/*-------------- HEADER -------------- */}
-        <HeaderLayout>
-          <Header />
-        </HeaderLayout>
+        <Box
+          top="0"
+          left="0"
+          right="0"
+          pos="fixed"
+          h="4.5rem"
+          w="100%"
+          bgColor={WHITE}
+          zIndex="9"
+        >
+          <HeaderLayout>
+            <Header />
+          </HeaderLayout>
+        </Box>
 
         {/*-------------- HERO -------------- */}
         <HeroLayout>

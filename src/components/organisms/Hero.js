@@ -47,8 +47,8 @@ const Hero = () => {
         {/*-------------- BUTTONS -------------- */}
         <Stack direction={['column', 'row']}>
           <ButtonAction
+            primary
             display="flex"
-            variant="solid"
             maxW="12rem"
             onClick={downloadCv}
           >
