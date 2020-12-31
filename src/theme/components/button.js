@@ -12,6 +12,7 @@ export const Button = {
     fontWeight: 'semibold',
     fontSize: '1rem',
     paddingY: '1.5rem',
+    boxShadow: 'none',
   },
 
   // Two variants: outline and solid
@@ -27,6 +28,7 @@ export const Button = {
       _focus: {
         borderColor: colorChangeDark(props),
         bg: colorChangeLight(props),
+        boxShadow: 'none',
       },
     }),
     solid: (props) => ({
@@ -39,8 +41,9 @@ export const Button = {
         borderColor: colorChangeDark(props),
       },
       _focus: {
-        bg: colorChangeDark(props),
         borderColor: colorChangeDark(props),
+        bg: colorChangeDark(props),
+        boxShadow: 'none',
       },
     }),
   },
