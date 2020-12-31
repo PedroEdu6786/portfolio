@@ -1,13 +1,14 @@
 import React from 'react'
 import { Box, Link } from '@chakra-ui/react'
-import { BLUE } from '../../utils/colors'
+import { togglePrimaryValue } from '../../utils/colorMode'
 
 const MenuItem = ({ children, isFirst, to = '/', ...rest }) => {
+  const COLOR = togglePrimaryValue()
   return (
     <Box
       {...rest}
       border={isFirst ? '2px' : 'none'}
-      borderColor={BLUE}
+      borderColor={COLOR}
       borderRadius="1rem"
     >
       <Link href={to} fontWeight="bold" py={0.75} px={4}>

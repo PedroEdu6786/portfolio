@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Stack } from '@chakra-ui/react'
+import { Box, Stack, useColorMode } from '@chakra-ui/react'
 import SocialMedia from '../molecules/SocialMedia'
 import Title from '../atoms/Title'
 import TitleVariant from '../atoms/TitleVariant'
@@ -8,6 +8,8 @@ import ButtonAction from '../atoms/ButtonAction'
 import HeroImage from '../atoms/HeroImage'
 
 const Hero = () => {
+  const { colorMode, toggleColorMode } = useColorMode()
+
   const downloadCv = () => {
     window.open('/files/CV.pdf')
   }
@@ -54,7 +56,12 @@ const Hero = () => {
           >
             Download my CV
           </ButtonAction>
-          <ButtonAction display="flex" variant="outline" maxW="12rem">
+          <ButtonAction
+            display="flex"
+            variant="outline"
+            maxW="12rem"
+            onClick={toggleColorMode}
+          >
             Change mood
           </ButtonAction>
         </Stack>

@@ -4,9 +4,12 @@ import NavLayout from '../templates/NavLayout'
 import NavbarLayout from '../templates/NavbarLayout'
 import MenuItem from '../atoms/MenuItem'
 import MenuIcon from '../atoms/MenuIcon'
+import { WHITE } from '../../utils/colors'
+import { togglePrimaryValue } from '../../utils/colorMode'
 
 const Header = () => {
   const [show, setShow] = useState(false)
+  const BG_COLOR = togglePrimaryValue()
 
   const toggleMenu = () => setShow(!show)
 
@@ -30,7 +33,11 @@ const Header = () => {
       </Stack>
 
       {/*-------------- NAVBAR -------------- */}
-      <NavbarLayout as="nav" right={show ? 0 : '-100%'}>
+      <NavbarLayout
+        as="nav"
+        right={show ? 0 : '-100%'}
+        bgColor={{ base: BG_COLOR, md: WHITE }}
+      >
         <Stack
           spacing={{ base: '2rem', md: '1rem' }}
           align="center"

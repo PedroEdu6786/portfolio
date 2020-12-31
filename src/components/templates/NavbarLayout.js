@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react'
 import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 
 const Navbar = styled(Box)`
   @media screen and (max-width: 767px) {
@@ -10,7 +11,7 @@ const Navbar = styled(Box)`
     padding: 2rem;
     transition: 0.5s;
     color: white;
-    background-color: #6380e8;
   }
 `
+
 export default Navbar

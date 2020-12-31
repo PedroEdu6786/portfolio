@@ -1,10 +1,12 @@
 import React from 'react'
 import { Box } from '@chakra-ui/react'
-import { BLUE } from '../../utils/colors'
+import { togglePrimaryValue } from '../../utils/colorMode'
 
 const TitleVariant = ({ children, ...rest }) => {
+  const COLOR = togglePrimaryValue()
+
   return (
-    <Box as="span" color={BLUE} {...rest}>
+    <Box as="span" color={COLOR} {...rest}>
       {children}
     </Box>
   )

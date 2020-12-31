@@ -3,26 +3,37 @@ import { Link } from '@chakra-ui/react'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
 import { FaInstagram } from 'react-icons/fa'
 import ReactIcon from '../atoms/ReactIcon'
+import { BLACK } from '../../utils/colors'
 
 const SocialMedia = ({ ...rest }) => {
   return (
     <>
       <Link w="1.6rem" href="https://github.com/PedroEdu6786" isExternal>
-        <ReactIcon fontSize="1.6rem" icon={FiGithub} {...rest} />
+        <ReactIcon fontSize="1.6rem" color={BLACK} icon={FiGithub} {...rest} />
       </Link>
       <Link
         w="1.6rem"
         href="https://www.linkedin.com/in/pedro-eduardo-cruz-de-la-fuente-1b632b176/"
         isExternal
       >
-        <ReactIcon fontSize="1.6rem" icon={FiLinkedin} {...rest} />
+        <ReactIcon
+          fontSize="1.6rem"
+          color={BLACK}
+          icon={FiLinkedin}
+          {...rest}
+        />
       </Link>
       <Link
         w="1.6rem"
         href="https://www.instagram.com/pedro_edu6786/"
         isExternal
       >
-        <ReactIcon fontSize="1.6rem" icon={FaInstagram} {...rest} />
+        <ReactIcon
+          fontSize="1.6rem"
+          color={BLACK}
+          icon={FaInstagram}
+          {...rest}
+        />
       </Link>
     </>
   )

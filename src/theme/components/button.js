@@ -1,4 +1,10 @@
-import { BLUE, WHITE, DARK_BLUE, LIGHT_BLUE } from '../../utils/colors'
+import { WHITE, BLACK } from '../../utils/colors'
+
+import {
+  colorChangePrimary,
+  colorChangeLight,
+  colorChangeDark,
+} from '../../utils/colorSwitch'
 
 export const Button = {
   // The styles all button have in common
@@ -10,31 +16,32 @@ export const Button = {
 
   // Two variants: outline and solid
   variants: {
-    outline: {
+    outline: (props) => ({
+      color: BLACK,
       border: '2px solid',
-      borderColor: BLUE,
+      borderColor: colorChangePrimary(props),
       _hover: {
-        borderColor: DARK_BLUE,
-        bg: LIGHT_BLUE,
+        borderColor: colorChangeDark(props),
+        bg: colorChangeLight(props),
       },
       _focus: {
-        borderColor: DARK_BLUE,
-        bg: LIGHT_BLUE,
+        borderColor: colorChangeDark(props),
+        bg: colorChangeLight(props),
       },
-    },
-    solid: {
-      bg: BLUE,
+    }),
+    solid: (props) => ({
+      bg: colorChangePrimary(props),
       color: WHITE,
       border: '2px solid',
-      borderColor: BLUE,
+      borderColor: colorChangePrimary(props),
       _hover: {
-        bg: DARK_BLUE,
-        borderColor: DARK_BLUE,
+        bg: colorChangeDark(props),
+        borderColor: colorChangeDark(props),
       },
       _focus: {
-        bg: DARK_BLUE,
-        borderColor: DARK_BLUE,
+        bg: colorChangeDark(props),
+        borderColor: colorChangeDark(props),
       },
-    },
+    }),
   },
 }

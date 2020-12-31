@@ -1,9 +1,10 @@
 import React from 'react'
 import { Icon } from '@chakra-ui/react'
-import { BLACK } from '../../utils/colors'
+import { togglePrimaryValue } from '../../utils/colorMode'
 
 const ReactIcon = ({ icon, ...rest }) => {
-  return <Icon as={icon} color={BLACK} {...rest} />
+  const COLOR = togglePrimaryValue()
+  return <Icon as={icon} color={COLOR} {...rest} />
 }
 
 export default ReactIcon

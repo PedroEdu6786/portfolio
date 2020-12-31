@@ -9,9 +9,11 @@ import Footer from '../src/components/organisms/Footer'
 import SectionLayout from '../src/components/templates/SectionLayout'
 import HeaderLayout from '../src/components/templates/HeaderLayout'
 import HeroLayout from '../src/components/templates/HeroLayout'
-import { LIGHT_BLUE, WHITE } from '../src/utils/colors'
+import { WHITE } from '../src/utils/colors'
+import { toggleLightValue } from '../src/utils/colorMode'
 
 export default function Home() {
+  const BG_COLOR = toggleLightValue()
   return (
     <>
       <Box h={{ md: '100vh' }}>
@@ -48,7 +50,7 @@ export default function Home() {
       </SectionLayout>
 
       {/*-------------- ABOUT -------------- */}
-      <Box id="about" my="10rem" bgColor={LIGHT_BLUE} w="100%">
+      <Box id="about" my="10rem" bgColor={BG_COLOR} w="100%">
         <SectionLayout>
           <About />
         </SectionLayout>
