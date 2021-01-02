@@ -1,20 +1,12 @@
 import React from 'react'
-import { Box, Stack, useColorMode } from '@chakra-ui/react'
+import { Box, Stack } from '@chakra-ui/react'
 import SocialMedia from '../molecules/SocialMedia'
-import Title from '../atoms/Title'
-import TitleVariant from '../atoms/TitleVariant'
-import Description from '../atoms/Description'
-import ButtonAction from '../atoms/ButtonAction'
+import Headline from '../molecules/Headline'
 import HeroImage from '../atoms/HeroImage'
+import HeroButton from '../molecules/HeroButton'
 import BlobHero from '../atoms/BlobHero'
 
 const Hero = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
-
-  const downloadCv = () => {
-    window.open('/files/CV.pdf')
-  }
-
   return (
     <Box>
       {/*-------------- PICTURES -------------- */}
@@ -23,41 +15,13 @@ const Hero = () => {
         <HeroImage src="/images/hero-img.png" alt="It'sMe" />
       </Box>
 
-      <Stack spacing={8} pos="relative" zIndex="1">
-        {/*-------------- HEADINGS -------------- */}
-        <Stack
-          maxW={{ base: '500px', lg: '600px' }}
-          pt={{ md: '8vh' }}
-          spacing={{ base: 4, md: 8 }}
-        >
-          <Title>
-            I develop <TitleVariant>dreams</TitleVariant> and{' '}
-            <TitleVariant>smiles</TitleVariant>
-          </Title>
-          <Description>
-            Software Engineer, Front-End Developer, Laugh machine
-          </Description>
-        </Stack>
+      <Stack spacing={8} pos="relative" pt={{ md: '8vh' }} zIndex="1">
+        {/*-------------- HEADLINE -------------- */}
+        <Headline />
 
         {/*-------------- BUTTONS -------------- */}
-        <Stack direction={['column', 'row']}>
-          <ButtonAction
-            primary
-            display="flex"
-            maxW="12rem"
-            onClick={downloadCv}
-          >
-            Download my CV
-          </ButtonAction>
-          <ButtonAction
-            display="flex"
-            variant="outline"
-            maxW="12rem"
-            onClick={toggleColorMode}
-          >
-            Change mood
-          </ButtonAction>
-        </Stack>
+
+        <HeroButton />
       </Stack>
 
       {/*-------------- SOCIAL MEDIA -------------- */}
