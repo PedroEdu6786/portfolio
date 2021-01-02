@@ -39,8 +39,8 @@ const ContactForm = ({ ...rest }) => {
         <Box>
           <FormLabel>What's email?</FormLabel>
           <InputForm
-            id="nameInput"
-            type="text"
+            id="emailInput"
+            type="email"
             placeholder="yourock@email.com"
             onChange={handleEmail}
           />
@@ -50,8 +50,8 @@ const ContactForm = ({ ...rest }) => {
         <Box>
           <FormLabel>What's the subject about?</FormLabel>
           <InputForm
-            id="emailInput"
-            type="email"
+            id="subjectInput"
+            type="text"
             placeholder="New Project"
             onChange={handleSubject}
           />

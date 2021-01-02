@@ -6,9 +6,10 @@ import ContactForm from '../molecules/ContactForm'
 
 const Contact = () => {
   return (
-    <Box mx="auto">
+    <Box>
       <Stack
         spacing={{ base: '2rem', md: '6rem' }}
+        justify="space-between"
         direction={['column', 'row']}
       >
         {/*-------------- DESCRIPTION -------------- */}
@@ -22,7 +23,7 @@ const Contact = () => {
           />
 
           {/*-------------- EMAIL -------------- */}
-          <Link href="mailto:pedrcg835@gmail.com" target="_blank">
+          <Link href="mailto:pedrcg835@gmail.com" isExternal>
             <HStack>
               <HiOutlineMail fontSize="1.5rem" />
               <Text>pedrcg835@gmail.com</Text>

@@ -2,6 +2,7 @@ import React from 'react'
 import { Flex, Stack, Image } from '@chakra-ui/react'
 import ButtonAction from '../atoms/ButtonAction'
 import SectionTitle from '../molecules/SectionTitle'
+import BlobAbout from '../atoms/BlobAbout'
 
 const About = () => {
   return (
@@ -12,18 +13,11 @@ const About = () => {
     >
       {/*-------------- PICTURES -------------- */}
       <Flex pos="relative" justify="center">
-        <Image
-          zIndex="0"
-          boxSize={{ base: '300px', md: '325px', lg: '350px' }}
-          pos="absolute"
-          bottom="0"
-          src="/images/blob.svg"
-          alt="blob"
-        />
+        <BlobAbout />
         <Image
           zIndex="2"
           pos="relative"
-          maxW={{ base: '250px', md: '275px', lg: '300px' }}
+          maxW={{ base: '250px', md: '300px', lg: '350px' }}
           src="/images/hero-img.png"
         />
       </Flex>

@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Wrap, Heading, Stack, SimpleGrid } from '@chakra-ui/react'
 import Pill from '../atoms/Pill'
-import { LIGHT_BLUE } from '../../utils/colors'
 
 const SkillsCard = ({ icon, title, skills }) => {
   return (
@@ -24,7 +23,9 @@ const SkillsCard = ({ icon, title, skills }) => {
         {/*-------------- SKILLS -------------- */}
         <Wrap spacing={1}>
           {skills.map((skill, key) => (
-            <Pill key={key} skill={skill} />
+            <Box key={key}>
+              <Pill skill={skill} />
+            </Box>
           ))}
         </Wrap>
       </Stack>

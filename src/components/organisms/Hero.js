@@ -6,6 +6,7 @@ import TitleVariant from '../atoms/TitleVariant'
 import Description from '../atoms/Description'
 import ButtonAction from '../atoms/ButtonAction'
 import HeroImage from '../atoms/HeroImage'
+import BlobHero from '../atoms/BlobHero'
 
 const Hero = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -18,16 +19,8 @@ const Hero = () => {
     <Box>
       {/*-------------- PICTURES -------------- */}
       <Box>
-        <HeroImage
-          boxSize={{ base: '300px', md: '325px', lg: '400px' }}
-          src="/images/blob.svg"
-          alt="blob"
-        />
-        <HeroImage
-          maxW={{ base: '250px', md: '275px', lg: '350px' }}
-          src="/images/hero-img.png"
-          alt="It'sMe"
-        />
+        <BlobHero />
+        <HeroImage src="/images/hero-img.png" alt="It'sMe" />
       </Box>
 
       <Stack spacing={8} pos="relative" zIndex="1">
