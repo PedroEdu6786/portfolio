@@ -3,6 +3,9 @@ import { BLACK } from '../utils/colors'
 
 export const styles = {
   global: (props) => ({
+    html: {
+      scrollBehavior: 'smooth',
+    },
     body: {
       color: BLACK,
       bg: '#F9F9F9',

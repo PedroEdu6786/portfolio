@@ -13,6 +13,7 @@ const InputForm = ({ id, type, placeholder, ...rest }) => {
       bg={COLOR}
       variant="filled"
       _focus={{ bg: COLOR, border: '2px solid #63b3ed' }}
+      _hover={{ bg: COLOR }}
       {...rest}
     />
   )

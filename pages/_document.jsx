@@ -11,8 +11,22 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
+            rel="preload"
+            href="/fonts/Montserrat-Regular.ttf"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/Montserrat-SemiBold.ttf"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/Montserrat-Bold.ttf"
+            as="font"
+            crossOrigin=""
           />
         </Head>
         <body>
