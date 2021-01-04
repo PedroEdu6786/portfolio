@@ -1,31 +1,24 @@
 import React from 'react'
-import { Box, Stack } from '@chakra-ui/react'
 import SocialMedia from '../molecules/SocialMedia'
-import Headline from '../molecules/Headline'
 import HeroImage from '../atoms/HeroImage'
-import HeroButton from '../molecules/HeroButton'
+import HeroContent from '../molecules/HeroContent'
 import BlobHero from '../atoms/BlobHero'
+import { BoxMotion } from '../../motion/components/BoxMotion'
+import { StackMotion } from '../../motion/components/StackMotion'
+import { container } from '../../motion/variants/container'
+import { item, itemLeft, itemDown } from '../../motion/variants/items'
 
 const Hero = () => {
   return (
-    <Box>
-      {/*-------------- PICTURES -------------- */}
-      <Box>
-        <BlobHero />
-        <HeroImage src="/images/hero-img.png" alt="It'sMe" />
-      </Box>
-
-      <Stack spacing={8} pos="relative" pt={{ md: '8vh' }} zIndex="1">
-        {/*-------------- HEADLINE -------------- */}
-        <Headline />
-
-        {/*-------------- BUTTONS -------------- */}
-
-        <HeroButton />
-      </Stack>
+    <BoxMotion variants={container} initial="hidden" animate="show">
+      {/*-------------- HEADLINE AND BUTTONS -------------- */}
+      <BoxMotion variants={item}>
+        <HeroContent />
+      </BoxMotion>
 
       {/*-------------- SOCIAL MEDIA -------------- */}
-      <Stack
+      <StackMotion
+        variants={itemLeft}
         pos={{ base: 'relative', md: 'absolute' }}
         pt="1rem"
         bottom="0"
@@ -34,8 +27,14 @@ const Hero = () => {
         direction={{ base: 'column', md: 'row' }}
       >
         <SocialMedia />
-      </Stack>
-    </Box>
+      </StackMotion>
+
+      {/*-------------- PICTURES -------------- */}
+      <BoxMotion variants={itemDown}>
+        <BlobHero />
+        <HeroImage src="/images/hero-img.png" alt="It'sMe" />
+      </BoxMotion>
+    </BoxMotion>
   )
 }
 
