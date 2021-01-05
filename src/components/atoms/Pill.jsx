@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { WrapItem, Text } from '@chakra-ui/react'
-import { toggleLightValue } from '../../utils/colorMode'
+import { toggleLightValue } from '../../utils/color-mode'
 
 const Pill = ({ skill, ...rest }) => {
   const COLOR = toggleLightValue()

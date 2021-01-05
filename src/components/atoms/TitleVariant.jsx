@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@chakra-ui/react'
-import { togglePrimaryValue } from '../../utils/colorMode'
+import { togglePrimaryValue } from '../../utils/color-mode'
 
 const TitleVariant = ({ children, ...rest }) => {
   const COLOR = togglePrimaryValue()

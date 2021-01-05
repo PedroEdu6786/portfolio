@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Link } from '@chakra-ui/react'
 import { Link as LinkC } from 'next/link'
 
-import { togglePrimaryValue } from '../../utils/colorMode'
+import { togglePrimaryValue } from '../../utils/color-mode'
 
 const MenuItem = ({ children, isFirst, to = '/', ...rest }) => {
   const COLOR = togglePrimaryValue()

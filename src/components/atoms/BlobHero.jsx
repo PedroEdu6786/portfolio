@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Box } from '@chakra-ui/react'
-import { togglePrimaryValue } from '../../utils/colorMode'
+import { togglePrimaryValue } from '../../utils/color-mode'
 
 const BlobHero = ({ ...rest }) => {
   const COLOR = togglePrimaryValue()

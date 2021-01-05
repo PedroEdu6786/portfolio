@@ -1,7 +1,7 @@
 import React from 'react'
 import { Stack, Center } from '@chakra-ui/react'
-import { BLACK, LIGHT_BLUE } from '../../utils/colors'
-import { toggleLightValue } from '../../utils/colorMode'
+import { BLACK } from '../../utils/colors'
+import { toggleLightValue } from '../../utils/color-mode'
 import SocialMedia from '../molecules/SocialMedia'
 
 const Footer = () => {

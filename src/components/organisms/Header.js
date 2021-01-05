@@ -7,7 +7,7 @@ import MenuIcon from '../atoms/MenuIcon'
 import { BoxMotion } from '../../motion/components/BoxMotion'
 import { containerHeader } from '../../motion/variants/container'
 import { WHITE } from '../../utils/colors'
-import { togglePrimaryValue } from '../../utils/colorMode'
+import { togglePrimaryValue } from '../../utils/color-mode'
 
 const Header = () => {
   const [show, setShow] = useState(false)

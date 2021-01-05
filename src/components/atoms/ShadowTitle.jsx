@@ -1,6 +1,6 @@
 import React from 'react'
 import { Heading } from '@chakra-ui/react'
-import { togglePrimaryValue } from '../../utils/colorMode'
+import { togglePrimaryValue } from '../../utils/color-mode'
 
 const ShadowTitle = ({ children, ...rest }) => {
   const COLOR = togglePrimaryValue()

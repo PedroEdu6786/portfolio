@@ -10,7 +10,7 @@ import SectionLayout from '../src/components/templates/SectionLayout'
 import HeaderLayout from '../src/components/templates/HeaderLayout'
 import HeroLayout from '../src/components/templates/HeroLayout'
 import { WHITE } from '../src/utils/colors'
-import { toggleLightValue } from '../src/utils/colorMode'
+import { toggleLightValue } from '../src/utils/color-mode'
 
 export default function Home() {
   const BG_COLOR = toggleLightValue()

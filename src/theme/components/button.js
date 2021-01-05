@@ -4,7 +4,7 @@ import {
   colorChangePrimary,
   colorChangeLight,
   colorChangeDark,
-} from '../../utils/colorSwitch'
+} from '../../utils/color-switch'
 
 export const Button = {
   // The styles all button have in common

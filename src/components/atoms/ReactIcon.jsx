@@ -1,6 +1,6 @@
 import React from 'react'
 import { Icon } from '@chakra-ui/react'
-import { togglePrimaryValue } from '../../utils/colorMode'
+import { togglePrimaryValue } from '../../utils/color-mode'
 
 const ReactIcon = ({ icon, ...rest }) => {
   const COLOR = togglePrimaryValue()

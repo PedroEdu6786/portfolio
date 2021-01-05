@@ -1,6 +1,6 @@
 import React from 'react'
 import { Input } from '@chakra-ui/react'
-import { toggleLightValue } from '../../utils/colorMode'
+import { toggleLightValue } from '../../utils/color-mode'
 
 const InputForm = ({ id, type, placeholder, ...rest }) => {
   const COLOR = toggleLightValue()
