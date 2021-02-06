@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useColorMode } from '@chakra-ui/react'
 import { Box, Heading, Stack, Link } from '@chakra-ui/react'
 import NavLayout from '../templates/NavLayout'
 import NavbarLayout from '../templates/NavbarLayout'
@@ -10,6 +11,8 @@ import { WHITE } from '../../utils/colors'
 import { togglePrimaryValue } from '../../utils/color-mode'
 
 const Header = () => {
+  const { colorMode } = useColorMode()
+
   const [show, setShow] = useState(false)
   const BG_COLOR = togglePrimaryValue()
 
@@ -21,7 +24,9 @@ const Header = () => {
         {/*-------------- LOGO -------------- */}
         <Box>
           <Heading as="h3" size="sm">
-            <Link href="#">Pedro Cruz</Link>
+            <Link href="#">
+              {colorMode === 'light' ? 'Pedro' : 'Pipe'} Cruz
+            </Link>
           </Heading>
         </Box>
 

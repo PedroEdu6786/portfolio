@@ -9,7 +9,7 @@ import { containerHero } from '../../motion/variants/container'
 import { item } from '../../motion/variants/items'
 
 const HeroContent = () => {
-  const { toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode()
 
   const downloadCv = () => {
     window.open('/files/CV.pdf')
@@ -31,11 +31,18 @@ const HeroContent = () => {
         spacing={{ base: 4, md: 8 }}
       >
         <Title>
-          I develop <TitleVariant>dreams</TitleVariant> and{' '}
-          <TitleVariant>smiles</TitleVariant>
+          I {colorMode === 'light' ? 'develop' : 'reach new'}{' '}
+          <TitleVariant>
+            {colorMode === 'light' ? 'dreams' : 'heights'}
+          </TitleVariant>{' '}
+          and{' '}
+          <TitleVariant>
+            {colorMode === 'light' ? 'smiles' : 'dreams'}
+          </TitleVariant>
         </Title>
         <Description>
-          Software Engineer, Front-End Developer, Laugh machine
+          Software Engineer, Full-Stack Developer,{' '}
+          {colorMode === 'light' ? 'Laugh Machine' : 'Over Achiever'}
         </Description>
       </StackMotion>
 

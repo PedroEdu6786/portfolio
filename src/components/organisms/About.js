@@ -1,10 +1,19 @@
 import React from 'react'
+import { useColorMode } from '@chakra-ui/react'
 import { Flex, Stack, Image } from '@chakra-ui/react'
 import ButtonAction from '../atoms/ButtonAction'
 import SectionTitle from '../molecules/SectionTitle'
 import BlobAbout from '../atoms/BlobAbout'
+import { bluePictures, redPictures } from '../../utils/pictures'
 
 const About = () => {
+  const { colorMode } = useColorMode()
+
+  const getRandomPicture = (pictures) => {
+    let randomNumber = Math.floor(Math.random() * bluePictures.length)
+    return pictures[randomNumber]
+  }
+
   return (
     <Stack
       direction={{ base: 'column', md: 'row-reverse' }}
@@ -18,7 +27,11 @@ const About = () => {
           zIndex="2"
           pos="relative"
           maxW={{ base: '250px', md: '300px', lg: '350px' }}
-          src="/images/hero-img.png"
+          src={
+            colorMode === 'light'
+              ? getRandomPicture(bluePictures)
+              : getRandomPicture(redPictures)
+          }
         />
       </Flex>
 
