@@ -14,6 +14,7 @@ const HeroContent = () => {
   const downloadCv = () => {
     window.open('/files/CV.pdf')
   }
+
   return (
     <StackMotion
       variants={containerHero}

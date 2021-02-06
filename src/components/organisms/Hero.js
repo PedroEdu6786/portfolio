@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useColorMode } from '@chakra-ui/react'
 import SocialMedia from '../molecules/SocialMedia'
 import HeroImage from '../atoms/HeroImage'

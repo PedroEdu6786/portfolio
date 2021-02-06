@@ -8,7 +8,13 @@ const Pill = ({ skill, ...rest }) => {
 
   return (
     <WrapItem {...rest}>
-      <Text fontSize=".85rem" bg={COLOR} borderRadius={15} p={1} px={3}>
+      <Text
+        fontSize={{ base: '.85rem', lg: '1rem' }}
+        bg={COLOR}
+        borderRadius={15}
+        p={1}
+        px={3}
+      >
         {skill}
       </Text>
     </WrapItem>

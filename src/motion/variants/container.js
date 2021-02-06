@@ -11,6 +11,19 @@ export const container = {
   },
 }
 
+export const containerProject = {
+  hidden: { opacity: 0, x: -30 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 1,
+      staggerChildren: 1,
+      default: { duration: 0.3 },
+    },
+  },
+}
+
 export const containerHero = {
   hidden: { opacity: 0, y: -30 },
   show: {
