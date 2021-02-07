@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Box } from '@chakra-ui/react'
 import Header from '../src/components/organisms/Header'
 import Hero from '../src/components/organisms/Hero'
@@ -11,11 +12,15 @@ import HeaderLayout from '../src/components/templates/HeaderLayout'
 import HeroLayout from '../src/components/templates/HeroLayout'
 import { WHITE } from '../src/utils/colors'
 import { toggleLightValue } from '../src/utils/color-mode'
+import ColorModeTransition from '../src/components/organisms/ColorModeTransition'
 
 export default function Home() {
+  const [colorTransition, setColorTransition] = useState(false)
   const BG_COLOR = toggleLightValue()
+
   return (
     <>
+      <ColorModeTransition colorTransition={colorTransition} />
       <Box h={{ md: '100vh' }}>
         {/*-------------- HEADER -------------- */}
         <Box
@@ -35,7 +40,7 @@ export default function Home() {
 
         {/*-------------- HERO -------------- */}
         <HeroLayout>
-          <Hero />
+          <Hero setColorTransition={setColorTransition} />
         </HeroLayout>
       </Box>
 

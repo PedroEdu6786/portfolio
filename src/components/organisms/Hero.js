@@ -10,8 +10,18 @@ import { container } from '../../motion/variants/container'
 import { item, itemLeft, itemDown } from '../../motion/variants/items'
 import { bluePictures, redPictures } from '../../utils/pictures'
 
-const Hero = () => {
-  const { colorMode } = useColorMode()
+const Hero = ({ setColorTransition }) => {
+  const { colorMode, toggleColorMode } = useColorMode()
+
+  const colorChange = () => {
+    setColorTransition(true)
+    setTimeout(() => toggleColorMode(), 1000)
+    setTimeout(() => setColorTransition(false), 2000)
+  }
+
+  const downloadCv = () => {
+    window.open('/files/CV.pdf')
+  }
 
   const getRandomPicture = (pictures) => {
     let randomNumber = Math.floor(Math.random() * bluePictures.length)
@@ -22,7 +32,7 @@ const Hero = () => {
     <BoxMotion variants={container} initial="hidden" animate="show">
       {/*-------------- HEADLINE AND BUTTONS -------------- */}
       <BoxMotion variants={item}>
-        <HeroContent />
+        <HeroContent colorChange={colorChange} downloadCv={downloadCv} />
       </BoxMotion>
 
       {/*-------------- SOCIAL MEDIA -------------- */}

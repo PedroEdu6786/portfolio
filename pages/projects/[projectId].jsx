@@ -13,74 +13,78 @@ import ProjectBanner from '../../src/components/molecules/ProjectBanner'
 const ProjectPage = () => {
   const router = useRouter()
   const { projectId } = router.query
-
   const projectData = projects.find((project) => project.id == projectId)
 
   return (
-    <BoxMotion layoutId={projectData.id} overflow="hidden">
-      {/* Page banner */}
-      <ProjectBanner title={projectData.title} />
+    <>
+      {projectId && (
+        <BoxMotion layoutId={projectData.id} overflow="hidden">
+          {/* Page banner */}
+          <ProjectBanner title={projectData.title} />
 
-      {/* Page Info */}
-      <StackMotion
-        variants={containerProject}
-        initial="hidden"
-        animate="show"
-        p={{ base: 10, md: '5rem' }}
-        mx="auto"
-        spacing="3rem"
-        maxW="1400px"
-      >
-        {/* Project Description */}
-        <Box>
-          <ProjectInfo title="Overview" description={projectData.description} />
-        </Box>
+          {/* Page Info */}
+          <StackMotion
+            variants={containerProject}
+            initial="hidden"
+            animate="show"
+            p={{ base: 10, md: '5rem' }}
+            mx="auto"
+            spacing="3rem"
+            maxW="1400px"
+          >
+            {/* Project Description */}
+            <Box>
+              <ProjectInfo
+                title="Overview"
+                description={projectData.description}
+              />
+            </Box>
 
-        {/* My Stack */}
-        <Stack
-          direction={['column', 'row']}
-          justify="space-between"
-          spacing="3rem"
-        >
-          <Box>
-            <ProjectInfo title="Focus" description={projectData.legend} />
-          </Box>
-          <Box>
-            <Subtitle fontSize="2rem" pb=".5rem">
-              Technologies used
-            </Subtitle>
-            <Description maxW="15rem" fontSize="1rem">
-              <Wrap spacing={2}>
-                {projectData.technologies.map((technology, key) => (
-                  <Box key={key}>
-                    <Pill skill={technology} />
-                  </Box>
-                ))}
-              </Wrap>
-            </Description>
-          </Box>
-        </Stack>
+            {/* My Stack */}
+            <Stack
+              direction={['column', 'row']}
+              justify="space-between"
+              spacing="3rem"
+            >
+              <Box>
+                <ProjectInfo title="Focus" description={projectData.legend} />
+              </Box>
+              <Box>
+                <Subtitle fontSize="2rem" pb=".5rem">
+                  Technologies used
+                </Subtitle>
+                <Wrap spacing={2}>
+                  {projectData.technologies.map((technology, key) => (
+                    <Box key={key}>
+                      <Pill skill={technology} />
+                    </Box>
+                  ))}
+                </Wrap>
+              </Box>
+            </Stack>
 
-        {/* More Info */}
-        <Stack justify="space-between" direction={['column', 'row']}>
-          <ProjectInfo title="My Role" description={projectData.role} />
-        </Stack>
+            {/* More Info */}
+            <Stack justify="space-between" direction={['column', 'row']}>
+              <ProjectInfo title="My Role" description={projectData.role} />
+            </Stack>
 
-        <Stack justify="space-between" direction={['column', 'row']}>
-          <ProjectInfo
-            title="The Challenge"
-            description={projectData.challenge}
-          />
-        </Stack>
+            <Stack justify="space-between" direction={['column', 'row']}>
+              <ProjectInfo
+                title="The Challenge"
+                description={projectData.challenge}
+              />
+            </Stack>
 
-        <Stack justify="space-between" direction={['column', 'row']}>
-          <ProjectInfo
-            title="The Solution"
-            description={projectData.solution}
-          />
-        </Stack>
-      </StackMotion>
-    </BoxMotion>
+            <Stack justify="space-between" direction={['column', 'row']}>
+              <ProjectInfo
+                title="The Solution"
+                description={projectData.solution}
+              />
+            </Stack>
+          </StackMotion>
+        </BoxMotion>
+      )}
+    </>
   )
 }
 

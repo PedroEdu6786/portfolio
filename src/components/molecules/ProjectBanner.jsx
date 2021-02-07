@@ -32,14 +32,12 @@ const ProjectBanner = ({ title }) => {
         px={{ md: '5rem' }}
       >
         <Link as={LinkC} color={WHITE} onClick={goBack}>
-          <a>
-            <HStack mb="1rem">
-              <ReactIcon fontSize="1.5rem" color={WHITE} icon={BsArrowLeft} />
-              <Text color={WHITE} fontWeight="semi" fontSize="1.5rem">
-                Go Back
-              </Text>
-            </HStack>
-          </a>
+          <HStack mb="1rem">
+            <ReactIcon fontSize="1.5rem" color={WHITE} icon={BsArrowLeft} />
+            <Text color={WHITE} fontWeight="semi" fontSize="1.5rem">
+              Go Back
+            </Text>
+          </HStack>
         </Link>
         <CardTitle fontSize="2.5rem">{title}</CardTitle>
       </Box>

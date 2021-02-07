@@ -1,5 +1,4 @@
 import React from 'react'
-import { useColorMode } from '@chakra-ui/react'
 import Title from '../atoms/Title'
 import TitleVariant from '../atoms/TitleVariant'
 import Description from '../atoms/Description'
@@ -7,13 +6,10 @@ import ButtonAction from '../atoms/ButtonAction'
 import { StackMotion } from '../../motion/components/StackMotion'
 import { containerHero } from '../../motion/variants/container'
 import { item } from '../../motion/variants/items'
+import { useColorMode } from '@chakra-ui/react'
 
-const HeroContent = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
-
-  const downloadCv = () => {
-    window.open('/files/CV.pdf')
-  }
+const HeroContent = ({ colorChange, downloadCv }) => {
+  const { colorMode } = useColorMode()
 
   return (
     <StackMotion
@@ -56,7 +52,7 @@ const HeroContent = () => {
           display="flex"
           variant="outline"
           maxW="12rem"
-          onClick={toggleColorMode}
+          onClick={colorChange}
         >
           Change mood
         </ButtonAction>
