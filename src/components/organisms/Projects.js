@@ -17,7 +17,13 @@ const Projects = () => {
       </Stack>
 
       {/*-------------- PROJECTS -------------- */}
-      <Flex mt="2rem" px={{ base: 6, md: 10 }} flex="1" overflow="auto">
+      <Flex
+        mt="2rem"
+        py="2rem"
+        px={{ base: 6, md: 10 }}
+        flex="1"
+        overflow="auto"
+      >
         <Stack
           direction="horizontal"
           justify="space-evenly"

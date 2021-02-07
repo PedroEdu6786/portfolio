@@ -4,7 +4,6 @@ import { projects } from '../../src/utils/projects'
 import { BoxMotion } from '../../src/motion/components/BoxMotion'
 import { StackMotion } from '../../src/motion/components/StackMotion'
 import Subtitle from '../../src/components/atoms/Subtitle'
-import Description from '../../src/components/atoms/Description'
 import { containerProject } from '../../src/motion/variants/container'
 import Pill from '../../src/components/atoms/Pill'
 import ProjectInfo from '../../src/components/molecules/ProjectInfo'
@@ -18,7 +17,11 @@ const ProjectPage = () => {
   return (
     <>
       {projectId && (
-        <BoxMotion layoutId={projectData.id} overflow="hidden">
+        <BoxMotion
+          animate={{ scale: 1, y: 0 }}
+          layoutId={projectData.id}
+          overflow="hidden"
+        >
           {/* Page banner */}
           <ProjectBanner title={projectData.title} />
 

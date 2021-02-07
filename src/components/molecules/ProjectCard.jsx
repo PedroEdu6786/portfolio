@@ -11,7 +11,17 @@ import { BoxMotion } from '../../motion/components/BoxMotion'
 const ProjectCard = ({ id, legend, title }) => {
   return (
     <Link href={`/projects/[projectId]?projectId=${id}`} as={`/projects/${id}`}>
-      <BoxMotion layoutId={id}>
+      <BoxMotion
+        layoutId={id}
+        transition={{ ease: 'linear' }}
+        animate={{ scale: 1, y: 0 }}
+        whileHover={{
+          scale: 1.05,
+          y: -10,
+          transition: { duration: 0.3 },
+        }}
+        _hover={{ cursor: 'pointer' }}
+      >
         <Box
           bgImage="url('/images/project.png')"
           bgPosition="center"

@@ -14,7 +14,7 @@ const ColorModeTransition = ({ colorTransition }) => {
     } else {
       setTimeout(() => setBgColor(BLUE), 2000)
     }
-  }, [colorMode, bgColor, setBgColor])
+  }, [colorMode, bgColor])
 
   return (
     <BoxMotion
