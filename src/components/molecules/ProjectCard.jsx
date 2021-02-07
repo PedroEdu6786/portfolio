@@ -6,12 +6,12 @@ import CardTitle from '../atoms/CardTitle'
 import CardLegend from '../atoms/CardLegend'
 import CardLink from '../atoms/CardLink'
 import { BLACK } from '../../utils/colors'
-import { motion } from 'framer-motion'
+import { BoxMotion } from '../../motion/components/BoxMotion'
 
 const ProjectCard = ({ id, legend, title }) => {
   return (
     <Link href={`/projects/[projectId]?projectId=${id}`} as={`/projects/${id}`}>
-      <motion.div layoutId={id}>
+      <BoxMotion layoutId={id}>
         <Box
           bgImage="url('/images/project.png')"
           bgPosition="center"
@@ -43,7 +43,7 @@ const ProjectCard = ({ id, legend, title }) => {
             pos="absolute"
           ></Box>
         </Box>
-      </motion.div>
+      </BoxMotion>
     </Link>
   )
 }

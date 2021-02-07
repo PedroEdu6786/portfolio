@@ -1,8 +1,6 @@
 import { useRouter } from 'next/router'
 import { Box, Stack, Wrap } from '@chakra-ui/react'
-import CardTitle from '../../src/components/atoms/CardTitle'
 import { projects } from '../../src/utils/projects'
-import { BLACK } from '../../src/utils/colors'
 import { BoxMotion } from '../../src/motion/components/BoxMotion'
 import { StackMotion } from '../../src/motion/components/StackMotion'
 import Subtitle from '../../src/components/atoms/Subtitle'
@@ -10,6 +8,7 @@ import Description from '../../src/components/atoms/Description'
 import { containerProject } from '../../src/motion/variants/container'
 import Pill from '../../src/components/atoms/Pill'
 import ProjectInfo from '../../src/components/molecules/ProjectInfo'
+import ProjectBanner from '../../src/components/molecules/ProjectBanner'
 
 const ProjectPage = () => {
   const router = useRouter()
@@ -19,36 +18,10 @@ const ProjectPage = () => {
 
   return (
     <BoxMotion layoutId={projectData.id} overflow="hidden">
-      <Box
-        bgImage="url('/images/project.png')"
-        bgPosition="center"
-        bgRepeat="no-repeat"
-        bgSize="cover"
-        w={{ base: '100vw' }}
-        h={{ base: '22rem', lg: '28rem' }}
-        pos="relative"
-      >
-        {/*-------------- CARD FILTER -------------- */}
-        <Box
-          bgColor={BLACK}
-          h="100%"
-          w="100%"
-          opacity="0.4"
-          pos="absolute"
-        ></Box>
-        {/*-------------- CARD CONTENT -------------- */}
-        <Box
-          mx="auto"
-          maxW="1400px"
-          pos="relative"
-          height="100%"
-          zIndex="2"
-          p={{ base: 10 }}
-          px={{ md: '5rem' }}
-        >
-          <CardTitle fontSize="2.5rem">{projectData.title}</CardTitle>
-        </Box>
-      </Box>
+      {/* Page banner */}
+      <ProjectBanner title={projectData.title} />
+
+      {/* Page Info */}
       <StackMotion
         variants={containerProject}
         initial="hidden"

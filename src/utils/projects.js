@@ -14,39 +14,80 @@ export const projects = [
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
   },
   {
-    id: 2,
-    legend: 'Back-End',
-    title: 'Node Rest API',
-    description: '',
-  },
-  {
     id: 3,
     legend: 'Full-Stack',
     title: 'Ecommerce',
-    description: '',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    technologies: [
+      'javascript',
+      'node',
+      'react',
+      'redux',
+      'express',
+      'bootstrap',
+    ],
+    role:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    challenge:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    solution:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
   },
   {
     id: 4,
     legend: 'Front-End',
     title: 'Landing Page Sun.mx',
-    description: '',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    technologies: ['html', 'css', 'javascript'],
+    role:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    challenge:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    solution:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
   },
   {
     id: 5,
     legend: 'Front-End',
     title: 'Movie Searcher',
-    description: '',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    technologies: ['react', '3rd party rest api'],
+    role:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    challenge:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    solution:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
   },
   {
     id: 6,
     legend: 'Front-End',
     title: 'Todo App',
-    description: '',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    technologies: ['react'],
+    role:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    challenge:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    solution:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
   },
   {
     id: 7,
     legend: 'Front-End',
     title: 'Github status checker',
-    description: '',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    technologies: ['react', 'github api'],
+    role:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    challenge:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    solution:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
   },
 ]

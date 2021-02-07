@@ -43,9 +43,6 @@ const About = () => {
           description="I provide smart, clean and simple solutions, to improve the user’s
         experience and the client’s wishes."
         />
-        <ButtonAction primary maxW={{ md: '14rem' }}>
-          Learn more about me
-        </ButtonAction>
       </Stack>
     </Stack>
   )
