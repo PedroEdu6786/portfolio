@@ -23,7 +23,7 @@ const ProjectPage = () => {
           overflow="hidden"
         >
           {/* Page banner */}
-          <ProjectBanner title={projectData.title} />
+          <ProjectBanner title={projectData.title} img={projectData.img} />
 
           {/* Page Info */}
           <StackMotion

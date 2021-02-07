@@ -12,6 +12,7 @@ export const projects = [
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
     solution:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    img: 'images/projects/laravel.png',
   },
   {
     id: 3,
@@ -33,6 +34,7 @@ export const projects = [
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
     solution:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    img: 'images/projects/ecommerce.png',
   },
   {
     id: 4,
@@ -47,6 +49,7 @@ export const projects = [
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
     solution:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    img: 'images/projects/sun.png',
   },
   {
     id: 5,
@@ -61,33 +64,21 @@ export const projects = [
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
     solution:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    img: 'images/projects/movie.png',
   },
   {
     id: 6,
     legend: 'Front-End',
-    title: 'Todo App',
+    title: 'Github Status Checker',
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
-    technologies: ['react'],
+    technologies: ['react', '3rd party rest api'],
     role:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
     challenge:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
     solution:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
-  },
-  {
-    id: 7,
-    legend: 'Front-End',
-    title: 'Github status checker',
-    description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
-    technologies: ['react', 'github api'],
-    role:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
-    challenge:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
-    solution:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    img: 'images/projects/github.png',
   },
 ]

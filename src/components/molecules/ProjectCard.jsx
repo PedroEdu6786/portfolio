@@ -8,7 +8,7 @@ import CardLink from '../atoms/CardLink'
 import { BLACK } from '../../utils/colors'
 import { BoxMotion } from '../../motion/components/BoxMotion'
 
-const ProjectCard = ({ id, legend, title }) => {
+const ProjectCard = ({ id, legend, title, img }) => {
   return (
     <Link href={`/projects/[projectId]?projectId=${id}`} as={`/projects/${id}`}>
       <BoxMotion
@@ -24,7 +24,7 @@ const ProjectCard = ({ id, legend, title }) => {
         _hover={{ cursor: 'pointer' }}
       >
         <Box
-          bgImage="url('/images/project.png')"
+          bgImage={`url(${img})`}
           bgPosition="center"
           bgRepeat="no-repeat"
           bgSize="cover"
@@ -50,7 +50,7 @@ const ProjectCard = ({ id, legend, title }) => {
             bgColor={BLACK}
             h="100%"
             w="100%"
-            opacity="0.4"
+            opacity="0.6"
             pos="absolute"
           ></Box>
         </Box>

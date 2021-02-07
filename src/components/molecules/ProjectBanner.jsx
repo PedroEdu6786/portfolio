@@ -6,12 +6,12 @@ import { BsArrowLeft } from 'react-icons/bs'
 import ReactIcon from '../atoms/ReactIcon'
 import { Link as LinkC } from 'next/link'
 
-const ProjectBanner = ({ title }) => {
+const ProjectBanner = ({ title, img }) => {
   const goBack = () => history.back()
 
   return (
     <Box
-      bgImage="url('/images/project.png')"
+      bgImage={`url(../${img})`}
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
