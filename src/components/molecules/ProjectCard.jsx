@@ -14,6 +14,7 @@ const ProjectCard = ({ id, legend, title }) => {
       <BoxMotion
         layoutId={id}
         transition={{ ease: 'linear' }}
+        initial={{ scale: 1, y: 0 }}
         animate={{ scale: 1, y: 0 }}
         whileHover={{
           scale: 1.05,
