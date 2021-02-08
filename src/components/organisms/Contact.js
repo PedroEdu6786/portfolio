@@ -23,10 +23,10 @@ const Contact = () => {
           />
 
           {/*-------------- EMAIL -------------- */}
-          <Link href="mailto:pedrcg835@gmail.com" isExternal>
+          <Link href="mailto:cruzeduardo029@gmail.com" isExternal>
             <HStack>
               <HiOutlineMail fontSize="1.5rem" />
-              <Text>pedrcg835@gmail.com</Text>
+              <Text>cruzeduardo029@gmail.com</Text>
             </HStack>
           </Link>
         </Stack>
