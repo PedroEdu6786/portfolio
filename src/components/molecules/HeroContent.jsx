@@ -6,9 +6,9 @@ import ButtonAction from '../atoms/ButtonAction'
 import { StackMotion } from '../../motion/components/StackMotion'
 import { containerHero } from '../../motion/variants/container'
 import { item } from '../../motion/variants/items'
-import { useColorMode } from '@chakra-ui/react'
+import { Spinner, useColorMode } from '@chakra-ui/react'
 
-const HeroContent = ({ colorChange, downloadCv }) => {
+const HeroContent = ({ colorChange, downloadCv, isLoading }) => {
   const { colorMode } = useColorMode()
 
   return (
@@ -45,8 +45,14 @@ const HeroContent = ({ colorChange, downloadCv }) => {
 
       {/*-------------- BUTTONS -------------- */}
       <StackMotion variants={containerHero} direction={['column', 'row']}>
-        <ButtonAction primary display="flex" maxW="12rem" onClick={downloadCv}>
-          Download my CV
+        <ButtonAction
+          primary
+          display="flex"
+          minW="16ch"
+          maxW="12rem"
+          onClick={downloadCv}
+        >
+          {isLoading ? <Spinner /> : 'Download my CV'}
         </ButtonAction>
         <ButtonAction
           display="flex"

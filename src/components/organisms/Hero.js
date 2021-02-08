@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useColorMode } from '@chakra-ui/react'
 import SocialMedia from '../molecules/SocialMedia'
 import HeroImage from '../atoms/HeroImage'
@@ -11,6 +11,7 @@ import { item, itemLeft, itemDown } from '../../motion/variants/items'
 import { bluePictures, redPictures } from '../../utils/pictures'
 
 const Hero = ({ setColorTransition }) => {
+  const [isLoading, setIsLoading] = useState(false)
   const { colorMode, toggleColorMode } = useColorMode()
 
   const colorChange = () => {
@@ -20,7 +21,11 @@ const Hero = ({ setColorTransition }) => {
   }
 
   const downloadCv = () => {
-    window.open('/files/CV.pdf')
+    setIsLoading(true)
+    setTimeout(() => {
+      window.open('/files/CV.pdf')
+      setIsLoading(false)
+    }, 1000)
   }
 
   const getRandomPicture = (pictures) => {
@@ -32,7 +37,11 @@ const Hero = ({ setColorTransition }) => {
     <BoxMotion variants={container} initial="hidden" animate="show">
       {/*-------------- HEADLINE AND BUTTONS -------------- */}
       <BoxMotion variants={item}>
-        <HeroContent colorChange={colorChange} downloadCv={downloadCv} />
+        <HeroContent
+          colorChange={colorChange}
+          downloadCv={downloadCv}
+          isLoading={isLoading}
+        />
       </BoxMotion>
 
       {/*-------------- SOCIAL MEDIA -------------- */}
