@@ -3,23 +3,21 @@ export const projects = [
     id: 1,
     legend: 'Back-End',
     title: 'Laravel Rest API',
-    description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    description: 'Application made for child violence prevention',
     technologies: ['php', 'laravel', 'passport', 'swagger', 'postman'],
     role:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'Back End Developer in charge of route authentication and user routes',
     challenge:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'The challenge during the development process was learning the technologies as the project was being develop. Being new to technologies like php and laravel made it so I had to learn new things in a short period of time',
     solution:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'Having knowledge of similar technologies helped me to quickly adapt to the team workflow, allowing me to deliver on time and form',
     img: 'images/projects/laravel.png',
   },
   {
     id: 3,
     legend: 'Full-Stack',
     title: 'Ecommerce',
-    description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    description: 'Udemy MERN stack ecommerce course',
     technologies: [
       'javascript',
       'node',
@@ -27,43 +25,40 @@ export const projects = [
       'redux',
       'express',
       'bootstrap',
+      'MongoDB',
     ],
-    role:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    role: 'Following the udemy course',
     challenge:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'Working with Paypal rest api for handling payments, lack of knowledge of redux',
     solution:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'Reading the paypal documentation so I could adjust it to any project. Also taking the time to understand and practice redux to get used to it',
     img: 'images/projects/ecommerce.png',
   },
   {
     id: 4,
     legend: 'Front-End',
     title: 'Landing Page Sun.mx',
-    description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
-    technologies: ['html', 'css', 'javascript'],
+    description: 'Landing Page for Sun.mx clothing business',
+    technologies: ['html', 'css', 'javascript', 'figma'],
     role:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'Project Manager in charge of working along side with the business owner and the developer building the website',
     challenge:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'Working along side a client and getting out of my comfort zone, trying always to fullfil the owner wishes so it could correctly represent the brand',
     solution:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'Keeping a solid communication with the client constantly and showing all the progress every certain amount of time so there would not be any misunderstandings',
     img: 'images/projects/sun.png',
   },
   {
     id: 5,
     legend: 'Front-End',
     title: 'Movie Searcher',
-    description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    description: 'Movie Searcher app using a 3rd party rest api',
     technologies: ['react', '3rd party rest api'],
-    role:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+    role: 'Front End Developer',
     challenge:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'Learning a new technology such as react by using react class components by using only react documentation and also connecting it to an external api',
     solution:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'Reading react documentation and watching tips and tutorials on how does react work learning about life cycles and states',
     img: 'images/projects/movie.png',
   },
   {
@@ -71,14 +66,13 @@ export const projects = [
     legend: 'Front-End',
     title: 'Github Status Checker',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
-    technologies: ['react', '3rd party rest api'],
-    role:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'App that uses github rest api to check the status and projects of a user account',
+    technologies: ['react', '3rd party rest api', 'hooks'],
+    role: 'Front Developer using external API with react',
     challenge:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'Develop the app while learning about react hooks and learning about github api, its limitations and the options available',
     solution:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui ad laudantium porro quam. Nisi, nobis. Fuga optio nostrum dolor?',
+      'Watching tutorials and best practices on how to implement this technologies',
     img: 'images/projects/github.png',
   },
 ]

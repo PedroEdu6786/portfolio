@@ -38,7 +38,7 @@ const HeroContent = ({ colorChange, downloadCv }) => {
           </TitleVariant>
         </Title>
         <Description>
-          Software Engineer, Full-Stack Developer,{' '}
+          Software Engineer, Front-End Developer,{' '}
           {colorMode === 'light' ? 'Laugh Machine' : 'Over Achiever'}
         </Description>
       </StackMotion>

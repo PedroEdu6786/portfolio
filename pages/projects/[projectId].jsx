@@ -67,18 +67,18 @@ const ProjectPage = () => {
             </Stack>
 
             {/* More Info */}
-            <Stack justify="space-between" direction={['column', 'row']}>
+            <Stack justify="flex-start" direction={['column', 'row']}>
               <ProjectInfo title="My Role" description={projectData.role} />
             </Stack>
 
-            <Stack justify="space-between" direction={['column', 'row']}>
+            <Stack justify="flex-start" direction={['column', 'row']}>
               <ProjectInfo
                 title="The Challenge"
                 description={projectData.challenge}
               />
             </Stack>
 
-            <Stack justify="space-between" direction={['column', 'row']}>
+            <Stack justify="flex-start" direction={['column', 'row']}>
               <ProjectInfo
                 title="The Solution"
                 description={projectData.solution}

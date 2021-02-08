@@ -1,10 +1,10 @@
 import React from 'react'
 import { useColorMode } from '@chakra-ui/react'
 import { Flex, Stack, Image } from '@chakra-ui/react'
-import ButtonAction from '../atoms/ButtonAction'
 import SectionTitle from '../molecules/SectionTitle'
 import BlobAbout from '../atoms/BlobAbout'
 import { bluePictures, redPictures } from '../../utils/pictures'
+import Description from '../atoms/Description'
 
 const About = () => {
   const { colorMode } = useColorMode()
@@ -43,6 +43,10 @@ const About = () => {
           description="I provide smart, clean and simple solutions, to improve the user’s
         experience and the client’s wishes."
         />
+        <Description>
+          20 year old pal looking for ways to improve as a person and explore
+          new and exciting things
+        </Description>
       </Stack>
     </Stack>
   )
