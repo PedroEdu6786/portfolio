@@ -7,7 +7,7 @@ const HeroLayout = ({ children, ...rest }) => {
     <Grid
       as="section"
       h={{ base: '35rem', md: '70vh' }}
-      minH="450px"
+      minH="500px"
       maxW="1400px"
       templateColumns="100%"
       columnGap={8}
