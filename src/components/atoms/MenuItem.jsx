@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Link } from '@chakra-ui/react'
-import { Link as LinkC } from 'next/link'
+import { Link as LinkR } from 'react-scroll'
 
 import { togglePrimaryValue } from '../../utils/color-mode'
 
@@ -13,7 +13,7 @@ const MenuItem = ({ children, isFirst, to = '/', ...rest }) => {
       borderColor={COLOR}
       borderRadius="1rem"
     >
-      <Link as={LinkC} href={to} fontWeight="bold" py={0.75} px={4}>
+      <Link as={LinkR} to={to} smooth={true} fontWeight="bold" py={0.75} px={4}>
         {children}
       </Link>
     </Box>

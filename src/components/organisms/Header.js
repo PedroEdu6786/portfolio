@@ -9,6 +9,7 @@ import { BoxMotion } from '../../motion/components/BoxMotion'
 import { containerHeader } from '../../motion/variants/container'
 import { WHITE } from '../../utils/colors'
 import { togglePrimaryValue } from '../../utils/color-mode'
+import { Link as LinkR, animateScroll as scroll } from 'react-scroll'
 
 const Header = () => {
   const { colorMode } = useColorMode()
@@ -24,7 +25,12 @@ const Header = () => {
         {/*-------------- LOGO -------------- */}
         <Box>
           <Heading as="h3" size="sm">
-            <Link href="#">
+            <Link
+              as={LinkR}
+              onClick={scroll.scrollToTop}
+              smooth={true}
+              duration={1000}
+            >
               {colorMode === 'light' ? 'Pedro' : 'Pipe'} Cruz
             </Link>
           </Heading>
@@ -32,7 +38,7 @@ const Header = () => {
 
         {/*-------------- MENU ICON AND CLICK TO ACTION PROJECTS -------------- */}
         <Stack display={{ base: 'flex', md: 'none' }} direction="row">
-          <MenuItem isFirst to="#projects">
+          <MenuItem isFirst to="projects">
             Projects
           </MenuItem>
           <Box onClick={toggleMenu}>
@@ -53,18 +59,18 @@ const Header = () => {
           >
             <MenuItem
               isFirst
-              to="#projects"
+              to="projects"
               display={{ base: 'none', md: 'flex' }}
             >
               Projects
             </MenuItem>
-            <MenuItem to="#skills" onClick={toggleMenu}>
+            <MenuItem to="skills" onClick={toggleMenu}>
               Skills
             </MenuItem>
-            <MenuItem to="#about" onClick={toggleMenu}>
+            <MenuItem to="about" onClick={toggleMenu}>
               About
             </MenuItem>
-            <MenuItem to="#contact" onClick={toggleMenu}>
+            <MenuItem to="contact" onClick={toggleMenu}>
               Contact
             </MenuItem>
           </Stack>

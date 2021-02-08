@@ -19,7 +19,7 @@ export default function Home() {
   const BG_COLOR = toggleLightValue()
 
   return (
-    <>
+    <Box>
       <ColorModeTransition colorTransition={colorTransition} />
       <Box h={{ md: '100vh' }}>
         {/*-------------- HEADER -------------- */}
@@ -68,6 +68,6 @@ export default function Home() {
 
       {/*-------------- FOOTER -------------- */}
       <Footer />
-    </>
+    </Box>
   )
 }
