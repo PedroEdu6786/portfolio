@@ -15,7 +15,7 @@ const Hero = ({ setColorTransition }) => {
 
   const colorChange = () => {
     setColorTransition(true)
-    setTimeout(() => toggleColorMode(), 1500)
+    setTimeout(() => toggleColorMode(), 1400)
     setTimeout(() => setColorTransition(false), 2000)
   }
 

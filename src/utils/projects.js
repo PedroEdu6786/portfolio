@@ -11,7 +11,7 @@ export const projects = [
       'The challenge during the development process was learning the technologies as the project was being develop. Being new to technologies like php and laravel made it so I had to learn new things in a short period of time',
     solution:
       'Having knowledge of similar technologies helped me to quickly adapt to the team workflow, allowing me to deliver on time and form',
-    img: 'images/projects/laravel.png',
+    img: 'images/projects/laravel.webp',
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ export const projects = [
       'Working with Paypal rest api for handling payments, lack of knowledge of redux',
     solution:
       'Reading the paypal documentation so I could adjust it to any project. Also taking the time to understand and practice redux to get used to it',
-    img: 'images/projects/ecommerce.png',
+    img: 'images/projects/ecommerce.webp',
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ export const projects = [
       'Working along side a client and getting out of my comfort zone, trying always to fullfil the owner wishes so it could correctly represent the brand',
     solution:
       'Keeping a solid communication with the client constantly and showing all the progress every certain amount of time so there would not be any misunderstandings',
-    img: 'images/projects/sun.png',
+    img: 'images/projects/sun.webp',
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ export const projects = [
       'Learning a new technology such as react by using react class components by using only react documentation and also connecting it to an external api',
     solution:
       'Reading react documentation and watching tips and tutorials on how does react work learning about life cycles and states',
-    img: 'images/projects/movie.png',
+    img: 'images/projects/movie.webp',
   },
   {
     id: 6,
@@ -73,6 +73,6 @@ export const projects = [
       'Develop the app while learning about react hooks and learning about github api, its limitations and the options available',
     solution:
       'Watching tutorials and best practices on how to implement this technologies',
-    img: 'images/projects/github.png',
+    img: 'images/projects/github.webp',
   },
 ]
