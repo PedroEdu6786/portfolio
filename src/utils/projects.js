@@ -5,8 +5,7 @@ export const projects = [
     title: 'Laravel Rest API',
     description: 'Application made for child violence prevention',
     technologies: ['php', 'laravel', 'passport', 'swagger', 'postman'],
-    role:
-      'Back End Developer in charge of route authentication and user routes',
+    role: 'Back End Developer in charge of route authentication and user routes',
     challenge:
       'The challenge during the development process was learning the technologies as the project was being develop. Being new to technologies like php and laravel made it so I had to learn new things in a short period of time',
     solution:
@@ -40,8 +39,7 @@ export const projects = [
     title: 'Landing Page Sun.mx',
     description: 'Landing Page for Sun.mx clothing business',
     technologies: ['html', 'css', 'javascript', 'figma'],
-    role:
-      'Project Manager in charge of working along side with the business owner and the developer building the website',
+    role: 'Project Manager in charge of working along side with the business owner and the developer building the website',
     challenge:
       'Working along side a client and getting out of my comfort zone, trying always to fullfil the owner wishes so it could correctly represent the brand',
     solution:
@@ -51,15 +49,15 @@ export const projects = [
   {
     id: 5,
     legend: 'Front-End',
-    title: 'Movie Searcher',
-    description: 'Movie Searcher app using a 3rd party rest api',
-    technologies: ['react', '3rd party rest api'],
-    role: 'Front End Developer',
+    title: 'Personal Blog',
+    description: 'Personal blog using typescript and nextjs',
+    technologies: ['react', 'cms', 'chakra ui', 'typescript'],
+    role: 'Front End Developer/Designer',
     challenge:
-      'Learning a new technology such as react by using react class components by using only react documentation and also connecting it to an external api',
+      'Connecting a cms to manage the blog using Incremental Static Regeneration for web optimization',
     solution:
-      'Reading react documentation and watching tips and tutorials on how does react work learning about life cycles and states',
-    img: 'images/projects/movie.webp',
+      'Reading documentation about the differences and benefits between incremental static regeneration, static site generation and server side rendering. For the cms reading the api and learning how to use it correctly.',
+    img: 'images/projects/blog.png',
   },
   {
     id: 6,
@@ -73,6 +71,20 @@ export const projects = [
       'Develop the app while learning about react hooks and learning about github api, its limitations and the options available',
     solution:
       'Watching tutorials and best practices on how to implement this technologies',
-    img: 'images/projects/github.webp',
+    img: 'https://www.muylinux.com/wp-content/uploads/2017/06/github.png',
+  },
+  {
+    id: 7,
+    legend: 'Front-End',
+    title: 'Freelance Portfolio',
+    description:
+      'Freelance website focused on gathering clients to build and improve my portfolio',
+    technologies: ['nextjs', 'chakra ui', 'mailchimp'],
+    role: 'Front End Developer/Designer',
+    challenge:
+      'Designing and creating a design system to create a brand, also connecting the mailchimp api by using api calls through nextjs',
+    solution:
+      'Researching design concepts and techniques through multiple tutorials and reading blogs about how to improve your design skills. Reading the mailchimp documentation to learn how to use correctly the routes for implementing email marketing techniques.',
+    img: 'images/projects/freelance.png',
   },
 ]
