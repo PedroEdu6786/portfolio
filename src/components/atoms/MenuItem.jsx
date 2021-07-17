@@ -13,7 +13,7 @@ const MenuItem = ({ children, isFirst, to = '/', ...rest }) => {
       borderColor={COLOR}
       borderRadius="1rem"
     >
-      <Link as={LinkR} to={to} smooth={true} fontWeight="bold" py={0.75} px={4}>
+      <Link as={LinkR} to={to} smooth={true} fontWeight="bold" py={0.75} px={3}>
         {children}
       </Link>
     </Box>

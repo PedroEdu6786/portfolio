@@ -64,15 +64,22 @@ const Header = () => {
             >
               Projects
             </MenuItem>
-            <MenuItem to="skills" onClick={toggleMenu}>
-              Skills
-            </MenuItem>
             <MenuItem to="about" onClick={toggleMenu}>
               About
             </MenuItem>
             <MenuItem to="contact" onClick={toggleMenu}>
               Contact
             </MenuItem>
+            <Link
+              fontWeight="bold"
+              py={0.75}
+              px={3}
+              onClick={toggleMenu}
+              href="https://pipecruz.hashnode.dev/"
+              isExternal
+            >
+              Blog
+            </Link>
           </Stack>
         </NavbarLayout>
       </NavLayout>
