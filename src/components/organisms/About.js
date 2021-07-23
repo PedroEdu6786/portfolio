@@ -6,8 +6,11 @@ import BlobAbout from '../atoms/BlobAbout'
 import { bluePictures, redPictures } from '../../utils/pictures'
 import Description from '../atoms/Description'
 
-const About = () => {
+const About = ({ about }) => {
   const { colorMode } = useColorMode()
+
+  const { about_me_title, content, description } = about[0].data
+  const { text: title } = about_me_title[0]
 
   const getRandomPicture = (pictures) => {
     let randomNumber = Math.floor(Math.random() * bluePictures.length)
@@ -38,15 +41,11 @@ const About = () => {
       {/*-------------- DESCRIPTION -------------- */}
       <Stack justify="center" spacing={8} maxW={{ md: '450px' }}>
         <SectionTitle
-          heading="In need of a software engineer? I’m your guy"
+          heading={title}
           shadow="About Me"
-          description="I provide smart, clean and simple solutions, to improve the user’s
-        experience and the client’s wishes."
+          description={description}
         />
-        <Description>
-          20 year old pal looking for ways to improve as a person and explore
-          new and exciting things
-        </Description>
+        <Description>{content}</Description>
       </Stack>
     </Stack>
   )

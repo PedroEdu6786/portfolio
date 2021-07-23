@@ -2,9 +2,8 @@ import React from 'react'
 import { Flex, Stack } from '@chakra-ui/react'
 import ProjectCard from '../molecules/ProjectCard'
 import SectionTitle from '../molecules/SectionTitle'
-import { projects } from '../../utils/projects'
 
-const Projects = () => {
+const Projects = ({ projects }) => {
   return (
     <>
       {/*-------------- DESCRIPTION -------------- */}

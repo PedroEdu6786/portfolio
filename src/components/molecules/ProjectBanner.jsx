@@ -11,7 +11,7 @@ const ProjectBanner = ({ title, img }) => {
 
   return (
     <Box
-      bgImage={`url(../${img})`}
+      bgImage={`url(${img})`}
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"

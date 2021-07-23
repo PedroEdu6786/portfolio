@@ -2,9 +2,16 @@ import React from 'react'
 import { Box, Wrap, WrapItem, Stack } from '@chakra-ui/react'
 import SkillsCard from '../molecules/SkillsCard.jsx'
 import SectionTitle from '../molecules/SectionTitle'
-import { skills } from '../../utils/skills'
+import { skills as SkillIcons } from '../../utils/skills'
 
-const Skills = () => {
+const Skills = ({ skills }) => {
+  const skillList = skills.map((skill, index) => ({
+    id: skill.id,
+    skill_title: skill.data.skill_title[0].text,
+    skills: skill.data.skills,
+    icon: SkillIcons[index],
+  }))
+
   return (
     <>
       <Stack spacing="6rem">
@@ -20,7 +27,7 @@ const Skills = () => {
         {/*-------------- SKILLS -------------- */}
         <Box>
           <Wrap spacing={14}>
-            {skills.map((skill) => (
+            {skillList.map((skill) => (
               <WrapItem key={skill.id}>
                 <SkillsCard {...skill} />
               </WrapItem>

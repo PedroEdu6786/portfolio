@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Box, Wrap, Heading, Stack, SimpleGrid } from '@chakra-ui/react'
 import Pill from '../atoms/Pill'
 
-const SkillsCard = ({ icon, title, skills }) => {
+const SkillsCard = ({ icon, skill_title, skills }) => {
   return (
     <SimpleGrid
       columns={2}
@@ -17,14 +17,14 @@ const SkillsCard = ({ icon, title, skills }) => {
       {/*-------------- SKILLS DESCRIPTION -------------- */}
       <Stack>
         <Heading as="h3" size="lg" fontWeight="semibold">
-          {title}
+          {skill_title}
         </Heading>
 
         {/*-------------- SKILLS -------------- */}
         <Wrap spacing={1}>
           {skills.map((skill, key) => (
             <Box key={key}>
-              <Pill skill={skill} />
+              <Pill skill={skill.skill} />
             </Box>
           ))}
         </Wrap>

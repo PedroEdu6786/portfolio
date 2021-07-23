@@ -13,8 +13,10 @@ import HeroLayout from '../src/components/templates/HeroLayout'
 import { WHITE } from '../src/utils/colors'
 import { toggleLightValue } from '../src/utils/color-mode'
 import ColorModeTransition from '../src/components/organisms/ColorModeTransition'
+import { Client } from '../src/utils/prismic-configuration'
+import Prismic from 'prismic-javascript'
 
-export default function Home() {
+export default function Home({ curriculum, projects, skills, about }) {
   const [colorTransition, setColorTransition] = useState(false)
   const BG_COLOR = toggleLightValue()
 
@@ -40,24 +42,27 @@ export default function Home() {
 
         {/*-------------- HERO -------------- */}
         <HeroLayout>
-          <Hero setColorTransition={setColorTransition} />
+          <Hero
+            curriculum={curriculum}
+            setColorTransition={setColorTransition}
+          />
         </HeroLayout>
       </Box>
 
       {/*-------------- PROJECTS -------------- */}
       <SectionLayout id="projects" mb={0} px={0}>
-        <Projects />
+        <Projects projects={projects} />
       </SectionLayout>
 
       {/*-------------- SKILLS -------------- */}
       <SectionLayout id="skills">
-        <Skills />
+        <Skills skills={skills} />
       </SectionLayout>
 
       {/*-------------- ABOUT -------------- */}
       <Box id="about" my="10rem" bgColor={BG_COLOR} w="100%">
         <SectionLayout>
-          <About />
+          <About about={about} />
         </SectionLayout>
       </Box>
 
@@ -70,4 +75,34 @@ export default function Home() {
       <Footer />
     </Box>
   )
+}
+
+export async function getStaticProps() {
+  const curriculum = await Client().query(
+    Prismic.Predicates.at('document.type', 'curriculum')
+  )
+
+  const projects = await Client().query(
+    Prismic.Predicates.at('document.type', 'project')
+  )
+
+  const skills = await Client().query(
+    Prismic.Predicates.at('document.type', 'skills')
+  )
+
+  const about = await Client().query(
+    Prismic.Predicates.at('document.type', 'about')
+  )
+
+  skills.results.sort((skill1, skill2) => skill1.uid.localeCompare(skill2.uid))
+
+  return {
+    props: {
+      curriculum: curriculum.results,
+      projects: projects.results,
+      skills: skills.results,
+      about: about.results,
+    },
+    revalidate: 60,
+  }
 }

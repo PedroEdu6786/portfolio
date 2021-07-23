@@ -10,9 +10,11 @@ import { container } from '../../motion/variants/container'
 import { item, itemLeft, itemDown } from '../../motion/variants/items'
 import { bluePictures, redPictures } from '../../utils/pictures'
 
-const Hero = ({ setColorTransition }) => {
+const Hero = ({ curriculum, setColorTransition }) => {
   const [isLoading, setIsLoading] = useState(false)
   const { colorMode, toggleColorMode } = useColorMode()
+
+  const cv = curriculum[0].data.cv.url
 
   const colorChange = () => {
     setColorTransition(true)
@@ -23,7 +25,7 @@ const Hero = ({ setColorTransition }) => {
   const downloadCv = () => {
     setIsLoading(true)
     setTimeout(() => {
-      window.open('/files/CV.pdf')
+      window.open(cv)
       setIsLoading(false)
     }, 1000)
   }

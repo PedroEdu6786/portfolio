@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { Box } from '@chakra-ui/react'
 import CardTitle from '../atoms/CardTitle'
@@ -8,11 +7,19 @@ import CardLink from '../atoms/CardLink'
 import { BLACK } from '../../utils/colors'
 import { BoxMotion } from '../../motion/components/BoxMotion'
 
-const ProjectCard = ({ id, legend, title, img }) => {
+const ProjectCard = ({ uid, data }) => {
+  const { project_title, project_role, card_image } = data
+
+  const title = project_title[0].text
+  const img = card_image.url
+
   return (
-    <Link href={`/projects/[projectId]?projectId=${id}`} as={`/projects/${id}`}>
+    <Link
+      href={`/projects/[projectId]?projectId=${uid}`}
+      as={`/projects/${uid}`}
+    >
       <BoxMotion
-        layoutId={id}
+        layoutId={uid}
         transition={{ ease: 'linear' }}
         initial={{ scale: 1, y: 0 }}
         animate={{ scale: 1, y: 0 }}
@@ -40,7 +47,7 @@ const ProjectCard = ({ id, legend, title, img }) => {
         >
           {/*-------------- CARD CONTENT -------------- */}
           <Box pos="absolute" height="100%" zIndex="2" p={5}>
-            <CardLegend>{legend}</CardLegend>
+            <CardLegend>{project_role}</CardLegend>
             <CardTitle>{title}</CardTitle>
             <CardLink />
           </Box>
@@ -57,11 +64,6 @@ const ProjectCard = ({ id, legend, title, img }) => {
       </BoxMotion>
     </Link>
   )
-}
-
-ProjectCard.propTypes = {
-  legend: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
 }
 
 export default ProjectCard
