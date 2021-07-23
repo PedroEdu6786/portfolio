@@ -1,4 +1,4 @@
-import { Box, Stack, Wrap } from '@chakra-ui/react'
+import { Box, Heading, Stack, Wrap } from '@chakra-ui/react'
 import { BoxMotion } from '../../src/motion/components/BoxMotion'
 import { StackMotion } from '../../src/motion/components/StackMotion'
 import Subtitle from '../../src/components/atoms/Subtitle'
@@ -8,32 +8,26 @@ import ProjectInfo from '../../src/components/molecules/ProjectInfo'
 import ProjectBanner from '../../src/components/molecules/ProjectBanner'
 import { Client } from '../../src/utils/prismic-configuration'
 import Prismic from 'prismic-javascript'
+import { useRouter } from 'next/dist/client/router'
 
 const ProjectPage = ({ uid, data }) => {
-  const {
-    project_title,
-    project_role,
-    project_image,
-    role_description,
-    overview,
-    challenge,
-    solution,
-    technologies,
-  } = data
-
-  const title = project_title[0].text
-  const img = project_image.url
+  const router = useRouter()
 
   return (
     <>
-      {uid && (
+      {router.isFallback ? (
+        <Heading>Loading...</Heading>
+      ) : (
         <BoxMotion
           animate={{ scale: 1, y: 0 }}
           layoutId={uid}
           overflow="hidden"
         >
           {/* Page banner */}
-          <ProjectBanner title={title} img={img} />
+          <ProjectBanner
+            title={data.project_title[0].text}
+            img={data.project_image.url}
+          />
 
           {/* Page Info */}
           <StackMotion
@@ -47,7 +41,7 @@ const ProjectPage = ({ uid, data }) => {
           >
             {/* Project Description */}
             <Box>
-              <ProjectInfo title="Overview" description={overview} />
+              <ProjectInfo title="Overview" description={data.overview} />
             </Box>
 
             {/* My Stack */}
@@ -57,14 +51,14 @@ const ProjectPage = ({ uid, data }) => {
               spacing="3rem"
             >
               <Box>
-                <ProjectInfo title="Focus" description={project_role} />
+                <ProjectInfo title="Focus" description={data.project_role} />
               </Box>
               <Box>
                 <Subtitle fontSize="2rem" pb=".5rem">
                   Technologies used
                 </Subtitle>
                 <Wrap spacing={2}>
-                  {technologies.map((technology, key) => (
+                  {data.technologies.map((technology, key) => (
                     <Box key={key}>
                       <Pill skill={technology.tech_name} />
                     </Box>
@@ -75,15 +69,18 @@ const ProjectPage = ({ uid, data }) => {
 
             {/* More Info */}
             <Stack justify="flex-start" direction={['column', 'row']}>
-              <ProjectInfo title="My Role" description={role_description} />
+              <ProjectInfo
+                title="My Role"
+                description={data.role_description}
+              />
             </Stack>
 
             <Stack justify="flex-start" direction={['column', 'row']}>
-              <ProjectInfo title="The Challenge" description={challenge} />
+              <ProjectInfo title="The Challenge" description={data.challenge} />
             </Stack>
 
             <Stack justify="flex-start" direction={['column', 'row']}>
-              <ProjectInfo title="The Solution" description={solution} />
+              <ProjectInfo title="The Solution" description={data.solution} />
             </Stack>
           </StackMotion>
         </BoxMotion>
@@ -116,6 +113,12 @@ export async function getStaticProps({ params }) {
   const project = listOfProjects.find((project) => {
     return project.uid === params.projectId
   })
+
+  if (!project) {
+    return {
+      notFound: true,
+    }
+  }
 
   return {
     props: {
